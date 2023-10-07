@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace MotorbikeRental.BusinessLogicLayer
 {
-class taiKhoanBLL
-{
-taiKhoanDAL taiKhoanDAL = new taiKhoanDAL();
+    class taiKhoanBLL
+    {
+        taiKhoanDAL taiKhoanDAL = new taiKhoanDAL();
         public int login(string tenTK, string matKhau)
         {
             DataTable dt = taiKhoanDAL.findByUsername(tenTK);
@@ -96,7 +96,7 @@ taiKhoanDAL taiKhoanDAL = new taiKhoanDAL();
             //else if (DateTime.Compare(Convert.ToDateTime(dNgaySinh),DateTime.Now)>0)
             //    return false;
             else
-                return taiKhoanDAL.insertND( PK_sCMND,  sTK, sMK, sCauHoiBM, sCauTraLoi,  sHoTen,  dNgaySinh, sGioiTinh,  sDiaChi,  sDienThoai);
+                return taiKhoanDAL.insertND(PK_sCMND, sTK, sMK, sCauHoiBM, sCauTraLoi, sHoTen, dNgaySinh, sGioiTinh, sDiaChi, sDienThoai);
         }
         public bool checkExistsNameAndCategory(string sCMND, string sTK)
         {

@@ -57,7 +57,7 @@ namespace MotorbikeRental.TaiKhoan
             this.tableLayoutPanel1.Controls.Add(this.tbMatKhauMoi, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.tbMatKhauCu, 1, 0);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(133, 140);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(372, 153);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
@@ -74,7 +74,6 @@ namespace MotorbikeRental.TaiKhoan
             this.tbNhapLaiMatKhauMoi.Location = new System.Drawing.Point(285, 108);
             this.tbNhapLaiMatKhauMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tbNhapLaiMatKhauMoi.Name = "tbNhapLaiMatKhauMoi";
-            this.tbNhapLaiMatKhauMoi.PasswordChar = '*';
             this.tbNhapLaiMatKhauMoi.Size = new System.Drawing.Size(236, 30);
             this.tbNhapLaiMatKhauMoi.TabIndex = 5;
             // 
@@ -121,7 +120,6 @@ namespace MotorbikeRental.TaiKhoan
             this.tbMatKhauMoi.Location = new System.Drawing.Point(285, 58);
             this.tbMatKhauMoi.Margin = new System.Windows.Forms.Padding(4);
             this.tbMatKhauMoi.Name = "tbMatKhauMoi";
-            this.tbMatKhauMoi.PasswordChar = '*';
             this.tbMatKhauMoi.Size = new System.Drawing.Size(236, 30);
             this.tbMatKhauMoi.TabIndex = 4;
             // 
@@ -132,7 +130,6 @@ namespace MotorbikeRental.TaiKhoan
             this.tbMatKhauCu.Location = new System.Drawing.Point(285, 9);
             this.tbMatKhauCu.Margin = new System.Windows.Forms.Padding(4);
             this.tbMatKhauCu.Name = "tbMatKhauCu";
-            this.tbMatKhauCu.PasswordChar = '*';
             this.tbMatKhauCu.Size = new System.Drawing.Size(236, 30);
             this.tbMatKhauCu.TabIndex = 3;
             // 
@@ -151,7 +148,7 @@ namespace MotorbikeRental.TaiKhoan
             this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnDoiMatKhau.ForeColor = System.Drawing.Color.White;
-            this.btnDoiMatKhau.Location = new System.Drawing.Point(533, 343);
+            this.btnDoiMatKhau.Location = new System.Drawing.Point(772, 356);
             this.btnDoiMatKhau.Name = "btnDoiMatKhau";
             this.btnDoiMatKhau.Size = new System.Drawing.Size(130, 40);
             this.btnDoiMatKhau.TabIndex = 47;
@@ -171,7 +168,7 @@ namespace MotorbikeRental.TaiKhoan
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
-            this.btnLamMoi.Location = new System.Drawing.Point(383, 343);
+            this.btnLamMoi.Location = new System.Drawing.Point(622, 356);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(120, 40);
             this.btnLamMoi.TabIndex = 48;
@@ -184,7 +181,7 @@ namespace MotorbikeRental.TaiKhoan
             // 
             this.lbDoiMK.AutoSize = true;
             this.lbDoiMK.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbDoiMK.Location = new System.Drawing.Point(278, 37);
+            this.lbDoiMK.Location = new System.Drawing.Point(517, 50);
             this.lbDoiMK.Name = "lbDoiMK";
             this.lbDoiMK.Size = new System.Drawing.Size(219, 38);
             this.lbDoiMK.TabIndex = 50;
@@ -194,7 +191,7 @@ namespace MotorbikeRental.TaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1324, 450);
             this.Controls.Add(this.lbDoiMK);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnDoiMatKhau);
