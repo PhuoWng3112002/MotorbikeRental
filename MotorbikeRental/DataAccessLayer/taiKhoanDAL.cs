@@ -71,7 +71,42 @@ namespace MotorbikeRental.DataAccessLayer
                 }
             }
         }
-
+        public DataTable findND()
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("Select PK_sCMND, sTK, sMK, sCauHoiBM, sCauTraLoi,sHoTen, dNgaySinh, sDiaChi, sGioiTinh, sDienThoai from vv_CTTaiKhoan_Chucvu where FK_iChucVu =3", cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable("vv_CTTaiKhoan_Chucvu"))
+                        {
+                            ad.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+        }
+        public DataTable findNV()
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("Select PK_sCMND, sTK, sMK, sCauHoiBM, sCauTraLoi,sHoTen, dNgaySinh, sDiaChi, sGioiTinh, sDienThoai,sChucVu from vv_CTTaiKhoan_Chucvu where FK_iChucVu=2 or FK_iChucVu=1", cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable("vv_CTTaiKhoan_Chucvu"))
+                        {
+                            ad.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+        }
         public bool insertND(string PK_sCMND, string sTK, string sMK, string sCauHoiBM, string sCauTraLoi, string sHoTen, string dNgaySinh, string sGioiTinh, string sDiaChi, string sDienThoai)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
@@ -87,7 +122,7 @@ namespace MotorbikeRental.DataAccessLayer
                     cmd.Parameters.AddWithValue("@CauTraLoi", sCauTraLoi);
                     cmd.Parameters.AddWithValue("@HoTen", sHoTen);
                     cmd.Parameters.AddWithValue("@NgaySinh",dNgaySinh);
-                    cmd.Parameters.AddWithValue("@DiaChi", sDiaChi);
+                    cmd.Parameters.AddWithValue("@DiaChi",  sDiaChi);
                     cmd.Parameters.AddWithValue("@GioiTinh", sGioiTinh);
                     cmd.Parameters.AddWithValue("@SDT", sDienThoai);
                     cnn.Open();

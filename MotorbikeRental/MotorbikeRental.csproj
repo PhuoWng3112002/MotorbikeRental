@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\anhBLL.cs" />
     <Compile Include="BusinessLogicLayer\nhaCungCapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\quyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\taiKhoanBLL.cs" />
     <Compile Include="Custom\VBButton.cs">
       <SubType>Component</SubType>
@@ -70,6 +71,7 @@
     </Compile>
     <Compile Include="DataAccessLayer\anhDAL.cs" />
     <Compile Include="DataAccessLayer\nhaCungCapDAL.cs" />
+    <Compile Include="DataAccessLayer\quyenDAL.cs" />
     <Compile Include="DataAccessLayer\taiKhoanDAL.cs" />
     <Compile Include="LayoutMaster.cs">
       <SubType>Form</SubType>
@@ -264,6 +266,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

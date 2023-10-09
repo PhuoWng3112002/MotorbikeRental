@@ -178,7 +178,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             {
                 //**************************************
                 //Check định dạng SĐT
-                Regex checkSDT = new Regex(@"^0[\d]{9}$");
+                Regex checkSDT = new Regex(@"^(\\+84|0)(3|5|7|8|9)[0-9]{8}$");
 
                 if (!checkSDT.IsMatch(tbSDT.Text.Trim()))
                 {
@@ -312,16 +312,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             tbCMND.Focus();
 
             //*****************************
-            errorProviderDangKy.SetError(tbCMND, "");
-            errorProviderDangKy.SetError(tbHoTen, "");
-            errorProviderDangKy.SetError(tbSDT, "");
-            errorProviderDangKy.SetError(tbTK, "");
-            errorProviderDangKy.SetError(tbMK, "");
-            errorProviderDangKy.SetError(tbNhapLaiMK, "");
-            errorProviderDangKy.SetError(tbCauHoi, "");
-            errorProviderDangKy.SetError(tbCauTraLoi, "");
-            errorProviderDangKy.SetError(tbDiaChi, "");
-            errorProviderDangKy.SetError(rbNu, "");
+            errorProviderDangKy.Clear();
 
         }
 

@@ -87,7 +87,14 @@ namespace MotorbikeRental.BusinessLogicLayer
         {
             return taiKhoanDAL.findAll();
         }
-
+        public DataTable findND()
+        {
+            return taiKhoanDAL.findND();
+        }
+        public DataTable findNV()
+        {
+            return taiKhoanDAL.findNV();
+        }
         public bool insertND(string PK_sCMND, string sTK, string sMK, string sCauHoiBM, string sCauTraLoi, string sHoTen, string dNgaySinh, string sGioiTinh, string sDiaChi, string sDienThoai)
         {
             if (string.IsNullOrEmpty(PK_sCMND) || string.IsNullOrEmpty(sTK) || string.IsNullOrEmpty(sMK) || string.IsNullOrEmpty(sCauHoiBM)
