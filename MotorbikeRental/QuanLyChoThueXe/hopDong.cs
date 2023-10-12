@@ -16,5 +16,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
         {
             InitializeComponent();
         }
+
+       
     }
 }

@@ -1,3 +1,15 @@
+
+CREATE DATABASE db_QuanLyChoThuePhuongTien
+ON (
+	NAME = ManagerRental,
+	FILENAME = 'E:\Learning\NHAPMONCNPM\source\Sql\db_QuanLyChoThuePhuongTien.mdf',
+	SIZE = 100MB,
+	MAXSIZE = UNLIMITED,
+	FILEGROWTH = 10%
+)
+
+
+
 create database db_QuanLyChoThuePhuongTien
 go
 use db_QuanLyChoThuePhuongTien
@@ -243,7 +255,7 @@ add
 /* gp 2 tblND & tblNV*/
 create view vv_TaiKhoan 
 AS
-SELECT *FROM tblNhanVien
+SELECT *FROM tblNguoiDung
 UNION
 SELECT *FROM tblNguoiDung
 go
