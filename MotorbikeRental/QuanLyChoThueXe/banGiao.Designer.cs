@@ -32,7 +32,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.components = new System.ComponentModel.Container();
             this.lblTongTienDatCoc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dpNgayHenTra = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayThue = new System.Windows.Forms.DateTimePicker();
@@ -48,21 +47,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.plDSNCC = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvBanGiao = new System.Windows.Forms.DataGridView();
-            this.tbCMNDKNV = new System.Windows.Forms.TextBox();
-            this.lbTrongTai = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbIDHopDong = new System.Windows.Forms.TextBox();
-            this.lbNCC = new System.Windows.Forms.Label();
-            this.lbDSBanGiao = new System.Windows.Forms.Label();
-            this.lbHangSX = new System.Windows.Forms.Label();
-            this.lbSL = new System.Windows.Forms.Label();
-            this.lbCMNDNV = new System.Windows.Forms.Label();
-            this.errorProviderBanGiao = new System.Windows.Forms.ErrorProvider(this.components);
-            this.tbCMNDKKH = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.plThongTinNCC = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.PK_iHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sGhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +55,20 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FK_sCMNDnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FK_iPhieuX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbTrongTai = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbDSBanGiao = new System.Windows.Forms.Label();
+            this.lbHangSX = new System.Windows.Forms.Label();
+            this.lbSL = new System.Windows.Forms.Label();
+            this.lbCMNDNV = new System.Windows.Forms.Label();
+            this.errorProviderBanGiao = new System.Windows.Forms.ErrorProvider(this.components);
+            this.tbCMNDKKH = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.plThongTinNCC = new System.Windows.Forms.Panel();
+            this.cbCMNDKH = new System.Windows.Forms.ComboBox();
+            this.cbCMNDNV = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.plDSNCC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBanGiao)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderBanGiao)).BeginInit();
@@ -98,19 +96,11 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.label5.TabIndex = 36;
             this.label5.Text = "Tổng Tiền Đặt Cọc : ";
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(174, 219);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 27);
-            this.textBox1.TabIndex = 35;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(25, 222);
+            this.label4.Location = new System.Drawing.Point(28, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 20);
             this.label4.TabIndex = 34;
@@ -163,7 +153,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(17, 329);
+            this.label7.Location = new System.Drawing.Point(545, 229);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(175, 20);
             this.label7.TabIndex = 38;
@@ -229,7 +219,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             // tbIDPhuongTien
             // 
             this.tbIDPhuongTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbIDPhuongTien.Location = new System.Drawing.Point(174, 109);
+            this.tbIDPhuongTien.Location = new System.Drawing.Point(177, 56);
             this.tbIDPhuongTien.Name = "tbIDPhuongTien";
             this.tbIDPhuongTien.Size = new System.Drawing.Size(282, 27);
             this.tbIDPhuongTien.TabIndex = 15;
@@ -238,7 +228,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             // 
             this.lbPhuongTienN.AutoSize = true;
             this.lbPhuongTienN.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbPhuongTienN.Location = new System.Drawing.Point(25, 112);
+            this.lbPhuongTienN.Location = new System.Drawing.Point(28, 59);
             this.lbPhuongTienN.Name = "lbPhuongTienN";
             this.lbPhuongTienN.Size = new System.Drawing.Size(115, 20);
             this.lbPhuongTienN.TabIndex = 14;
@@ -249,7 +239,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.lblTienThuePT.AutoSize = true;
             this.lblTienThuePT.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lblTienThuePT.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.lblTienThuePT.Location = new System.Drawing.Point(198, 329);
+            this.lblTienThuePT.Location = new System.Drawing.Point(726, 229);
             this.lblTienThuePT.Name = "lblTienThuePT";
             this.lblTienThuePT.Size = new System.Drawing.Size(94, 20);
             this.lblTienThuePT.TabIndex = 39;
@@ -315,164 +305,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.dgvBanGiao.Size = new System.Drawing.Size(958, 284);
             this.dgvBanGiao.TabIndex = 4;
             // 
-            // tbCMNDKNV
-            // 
-            this.tbCMNDKNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbCMNDKNV.Location = new System.Drawing.Point(686, 159);
-            this.tbCMNDKNV.Name = "tbCMNDKNV";
-            this.tbCMNDKNV.Size = new System.Drawing.Size(291, 27);
-            this.tbCMNDKNV.TabIndex = 9;
-            // 
-            // lbTrongTai
-            // 
-            this.lbTrongTai.AutoSize = true;
-            this.lbTrongTai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbTrongTai.Location = new System.Drawing.Point(545, 111);
-            this.lbTrongTai.Name = "lbTrongTai";
-            this.lbTrongTai.Size = new System.Drawing.Size(103, 20);
-            this.lbTrongTai.TabIndex = 6;
-            this.lbTrongTai.Text = "Ngày Hẹn Trả";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(25, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "I. Thông tin bàn giao";
-            // 
-            // tbIDHopDong
-            // 
-            this.tbIDHopDong.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbIDHopDong.Location = new System.Drawing.Point(174, 54);
-            this.tbIDHopDong.Name = "tbIDHopDong";
-            this.tbIDHopDong.Size = new System.Drawing.Size(282, 27);
-            this.tbIDHopDong.TabIndex = 2;
-            // 
-            // lbNCC
-            // 
-            this.lbNCC.AutoSize = true;
-            this.lbNCC.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbNCC.Location = new System.Drawing.Point(25, 57);
-            this.lbNCC.Name = "lbNCC";
-            this.lbNCC.Size = new System.Drawing.Size(99, 20);
-            this.lbNCC.TabIndex = 1;
-            this.lbNCC.Text = "ID Hợp Đồng";
-            // 
-            // lbDSBanGiao
-            // 
-            this.lbDSBanGiao.AutoSize = true;
-            this.lbDSBanGiao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbDSBanGiao.Location = new System.Drawing.Point(418, 23);
-            this.lbDSBanGiao.Name = "lbDSBanGiao";
-            this.lbDSBanGiao.Size = new System.Drawing.Size(267, 31);
-            this.lbDSBanGiao.TabIndex = 27;
-            this.lbDSBanGiao.Text = "DANH SÁCH BÀN GIAO";
-            // 
-            // lbHangSX
-            // 
-            this.lbHangSX.AutoSize = true;
-            this.lbHangSX.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbHangSX.Location = new System.Drawing.Point(25, 167);
-            this.lbHangSX.Name = "lbHangSX";
-            this.lbHangSX.Size = new System.Drawing.Size(140, 20);
-            this.lbHangSX.TabIndex = 12;
-            this.lbHangSX.Text = "CMND Khách hàng";
-            // 
-            // lbSL
-            // 
-            this.lbSL.AutoSize = true;
-            this.lbSL.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbSL.Location = new System.Drawing.Point(545, 57);
-            this.lbSL.Name = "lbSL";
-            this.lbSL.Size = new System.Drawing.Size(84, 20);
-            this.lbSL.TabIndex = 10;
-            this.lbSL.Text = "Ngày Thuê";
-            // 
-            // lbCMNDNV
-            // 
-            this.lbCMNDNV.AutoSize = true;
-            this.lbCMNDNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbCMNDNV.Location = new System.Drawing.Point(545, 166);
-            this.lbCMNDNV.Name = "lbCMNDNV";
-            this.lbCMNDNV.Size = new System.Drawing.Size(132, 20);
-            this.lbCMNDNV.TabIndex = 8;
-            this.lbCMNDNV.Text = "CMND Nhân Viên";
-            // 
-            // errorProviderBanGiao
-            // 
-            this.errorProviderBanGiao.ContainerControl = this;
-            // 
-            // tbCMNDKKH
-            // 
-            this.tbCMNDKKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbCMNDKKH.Location = new System.Drawing.Point(174, 164);
-            this.tbCMNDKKH.Name = "tbCMNDKKH";
-            this.tbCMNDKKH.Size = new System.Drawing.Size(282, 27);
-            this.tbCMNDKKH.TabIndex = 13;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(581, 220);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 69);
-            this.label2.TabIndex = 26;
-            // 
-            // plThongTinNCC
-            // 
-            this.plThongTinNCC.Controls.Add(this.textBox2);
-            this.plThongTinNCC.Controls.Add(this.label6);
-            this.plThongTinNCC.Controls.Add(this.lblTienThuePT);
-            this.plThongTinNCC.Controls.Add(this.label7);
-            this.plThongTinNCC.Controls.Add(this.lblTongTienDatCoc);
-            this.plThongTinNCC.Controls.Add(this.label5);
-            this.plThongTinNCC.Controls.Add(this.textBox1);
-            this.plThongTinNCC.Controls.Add(this.label4);
-            this.plThongTinNCC.Controls.Add(this.dpNgayHenTra);
-            this.plThongTinNCC.Controls.Add(this.dtpNgayThue);
-            this.plThongTinNCC.Controls.Add(this.btnLamMoi);
-            this.plThongTinNCC.Controls.Add(this.btnTimKiem);
-            this.plThongTinNCC.Controls.Add(this.btnXoa);
-            this.plThongTinNCC.Controls.Add(this.tbIDPhuongTien);
-            this.plThongTinNCC.Controls.Add(this.btnThem);
-            this.plThongTinNCC.Controls.Add(this.lbPhuongTienN);
-            this.plThongTinNCC.Controls.Add(this.btnSua);
-            this.plThongTinNCC.Controls.Add(this.tbCMNDKKH);
-            this.plThongTinNCC.Controls.Add(this.lbHangSX);
-            this.plThongTinNCC.Controls.Add(this.lbSL);
-            this.plThongTinNCC.Controls.Add(this.tbCMNDKNV);
-            this.plThongTinNCC.Controls.Add(this.lbCMNDNV);
-            this.plThongTinNCC.Controls.Add(this.lbTrongTai);
-            this.plThongTinNCC.Controls.Add(this.label1);
-            this.plThongTinNCC.Controls.Add(this.tbIDHopDong);
-            this.plThongTinNCC.Controls.Add(this.lbNCC);
-            this.plThongTinNCC.Location = new System.Drawing.Point(67, 87);
-            this.plThongTinNCC.Name = "plThongTinNCC";
-            this.plThongTinNCC.Size = new System.Drawing.Size(1019, 462);
-            this.plThongTinNCC.TabIndex = 28;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(686, 215);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(291, 27);
-            this.textBox2.TabIndex = 41;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(546, 218);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 40;
-            this.label6.Text = "Ghi Chú";
-            // 
             // PK_iHopDong
             // 
             this.PK_iHopDong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -537,6 +369,152 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.FK_iPhieuX.Name = "FK_iPhieuX";
             this.FK_iPhieuX.Width = 125;
             // 
+            // lbTrongTai
+            // 
+            this.lbTrongTai.AutoSize = true;
+            this.lbTrongTai.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbTrongTai.Location = new System.Drawing.Point(545, 111);
+            this.lbTrongTai.Name = "lbTrongTai";
+            this.lbTrongTai.Size = new System.Drawing.Size(103, 20);
+            this.lbTrongTai.TabIndex = 6;
+            this.lbTrongTai.Text = "Ngày Hẹn Trả";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(25, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(151, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "I. Thông tin bàn giao";
+            // 
+            // lbDSBanGiao
+            // 
+            this.lbDSBanGiao.AutoSize = true;
+            this.lbDSBanGiao.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbDSBanGiao.Location = new System.Drawing.Point(418, 23);
+            this.lbDSBanGiao.Name = "lbDSBanGiao";
+            this.lbDSBanGiao.Size = new System.Drawing.Size(267, 31);
+            this.lbDSBanGiao.TabIndex = 27;
+            this.lbDSBanGiao.Text = "DANH SÁCH BÀN GIAO";
+            // 
+            // lbHangSX
+            // 
+            this.lbHangSX.AutoSize = true;
+            this.lbHangSX.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbHangSX.Location = new System.Drawing.Point(28, 114);
+            this.lbHangSX.Name = "lbHangSX";
+            this.lbHangSX.Size = new System.Drawing.Size(140, 20);
+            this.lbHangSX.TabIndex = 12;
+            this.lbHangSX.Text = "CMND Khách hàng";
+            // 
+            // lbSL
+            // 
+            this.lbSL.AutoSize = true;
+            this.lbSL.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbSL.Location = new System.Drawing.Point(545, 57);
+            this.lbSL.Name = "lbSL";
+            this.lbSL.Size = new System.Drawing.Size(84, 20);
+            this.lbSL.TabIndex = 10;
+            this.lbSL.Text = "Ngày Thuê";
+            // 
+            // lbCMNDNV
+            // 
+            this.lbCMNDNV.AutoSize = true;
+            this.lbCMNDNV.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.lbCMNDNV.Location = new System.Drawing.Point(545, 173);
+            this.lbCMNDNV.Name = "lbCMNDNV";
+            this.lbCMNDNV.Size = new System.Drawing.Size(132, 20);
+            this.lbCMNDNV.TabIndex = 8;
+            this.lbCMNDNV.Text = "CMND Nhân Viên";
+            // 
+            // errorProviderBanGiao
+            // 
+            this.errorProviderBanGiao.ContainerControl = this;
+            // 
+            // tbCMNDKKH
+            // 
+            this.tbCMNDKKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbCMNDKKH.Location = new System.Drawing.Point(177, 169);
+            this.tbCMNDKKH.Name = "tbCMNDKKH";
+            this.tbCMNDKKH.Size = new System.Drawing.Size(282, 27);
+            this.tbCMNDKKH.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(581, 220);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 69);
+            this.label2.TabIndex = 26;
+            // 
+            // plThongTinNCC
+            // 
+            this.plThongTinNCC.Controls.Add(this.cbCMNDKH);
+            this.plThongTinNCC.Controls.Add(this.cbCMNDNV);
+            this.plThongTinNCC.Controls.Add(this.textBox2);
+            this.plThongTinNCC.Controls.Add(this.label6);
+            this.plThongTinNCC.Controls.Add(this.lblTienThuePT);
+            this.plThongTinNCC.Controls.Add(this.label7);
+            this.plThongTinNCC.Controls.Add(this.lblTongTienDatCoc);
+            this.plThongTinNCC.Controls.Add(this.label5);
+            this.plThongTinNCC.Controls.Add(this.label4);
+            this.plThongTinNCC.Controls.Add(this.dpNgayHenTra);
+            this.plThongTinNCC.Controls.Add(this.dtpNgayThue);
+            this.plThongTinNCC.Controls.Add(this.btnLamMoi);
+            this.plThongTinNCC.Controls.Add(this.btnTimKiem);
+            this.plThongTinNCC.Controls.Add(this.btnXoa);
+            this.plThongTinNCC.Controls.Add(this.tbIDPhuongTien);
+            this.plThongTinNCC.Controls.Add(this.btnThem);
+            this.plThongTinNCC.Controls.Add(this.lbPhuongTienN);
+            this.plThongTinNCC.Controls.Add(this.btnSua);
+            this.plThongTinNCC.Controls.Add(this.tbCMNDKKH);
+            this.plThongTinNCC.Controls.Add(this.lbHangSX);
+            this.plThongTinNCC.Controls.Add(this.lbSL);
+            this.plThongTinNCC.Controls.Add(this.lbCMNDNV);
+            this.plThongTinNCC.Controls.Add(this.lbTrongTai);
+            this.plThongTinNCC.Controls.Add(this.label1);
+            this.plThongTinNCC.Location = new System.Drawing.Point(67, 87);
+            this.plThongTinNCC.Name = "plThongTinNCC";
+            this.plThongTinNCC.Size = new System.Drawing.Size(1019, 462);
+            this.plThongTinNCC.TabIndex = 28;
+            // 
+            // cbCMNDKH
+            // 
+            this.cbCMNDKH.FormattingEnabled = true;
+            this.cbCMNDKH.Location = new System.Drawing.Point(177, 114);
+            this.cbCMNDKH.Name = "cbCMNDKH";
+            this.cbCMNDKH.Size = new System.Drawing.Size(282, 24);
+            this.cbCMNDKH.TabIndex = 43;
+            // 
+            // cbCMNDNV
+            // 
+            this.cbCMNDNV.FormattingEnabled = true;
+            this.cbCMNDNV.Location = new System.Drawing.Point(686, 169);
+            this.cbCMNDNV.Name = "cbCMNDNV";
+            this.cbCMNDNV.Size = new System.Drawing.Size(291, 24);
+            this.cbCMNDNV.TabIndex = 42;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox2.Location = new System.Drawing.Point(177, 222);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(282, 27);
+            this.textBox2.TabIndex = 41;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(28, 225);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(63, 20);
+            this.label6.TabIndex = 40;
+            this.label6.Text = "Ghi Chú";
+            // 
             // banGiao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -562,7 +540,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
 
         private System.Windows.Forms.Label lblTongTienDatCoc;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dpNgayHenTra;
         private System.Windows.Forms.DateTimePicker dtpNgayThue;
@@ -578,11 +555,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
         private System.Windows.Forms.Panel plDSNCC;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvBanGiao;
-        private System.Windows.Forms.TextBox tbCMNDKNV;
         private System.Windows.Forms.Label lbTrongTai;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbIDHopDong;
-        private System.Windows.Forms.Label lbNCC;
         private System.Windows.Forms.Label lbDSBanGiao;
         private System.Windows.Forms.Label lbHangSX;
         private System.Windows.Forms.Label lbSL;
@@ -601,5 +575,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_sCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_sCMNDnv;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_iPhieuX;
+        private System.Windows.Forms.ComboBox cbCMNDNV;
+        private System.Windows.Forms.ComboBox cbCMNDKH;
     }
 }

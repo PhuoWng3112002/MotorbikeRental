@@ -32,6 +32,13 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvHopDong = new System.Windows.Forms.DataGridView();
+            this.PK_iHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNgayHenTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_sCMNDnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_iPhieuX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnLamMoi = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.btnTimKiem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.btnXoa = new MotorbikeRental.PresentationLayer.Custom.VBButton();
@@ -39,14 +46,12 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.btnThem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.lbPhuongTienN = new System.Windows.Forms.Label();
             this.btnSua = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.tbCMNDKKH = new System.Windows.Forms.TextBox();
             this.errorProviderHopDong = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.lbHangSX = new System.Windows.Forms.Label();
             this.lbSL = new System.Windows.Forms.Label();
             this.lbCMNDNV = new System.Windows.Forms.Label();
             this.lbDSHopDong = new System.Windows.Forms.Label();
-            this.tbCMNDKNV = new System.Windows.Forms.TextBox();
             this.lbTrongTai = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tbIDHopDong = new System.Windows.Forms.TextBox();
@@ -61,13 +66,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.label4 = new System.Windows.Forms.Label();
             this.dpNgayHenTra = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayThue = new System.Windows.Forms.DateTimePicker();
-            this.PK_iHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNgayHenTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_sCMNDnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_iPhieuX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbCMNDNV = new System.Windows.Forms.ComboBox();
+            this.cbCNMDKH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderHopDong)).BeginInit();
             this.plDSNCC.SuspendLayout();
@@ -102,6 +102,62 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.dgvHopDong.RowTemplate.Height = 24;
             this.dgvHopDong.Size = new System.Drawing.Size(958, 284);
             this.dgvHopDong.TabIndex = 4;
+            // 
+            // PK_iHopDong
+            // 
+            this.PK_iHopDong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PK_iHopDong.DataPropertyName = "PK_iHopDong";
+            this.PK_iHopDong.HeaderText = "idHĐ";
+            this.PK_iHopDong.MinimumWidth = 6;
+            this.PK_iHopDong.Name = "PK_iHopDong";
+            // 
+            // FK_iPhuongTien
+            // 
+            this.FK_iPhuongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FK_iPhuongTien.DataPropertyName = "FK_iPhuongTien";
+            this.FK_iPhuongTien.HeaderText = "Id Phương Tiện";
+            this.FK_iPhuongTien.MinimumWidth = 6;
+            this.FK_iPhuongTien.Name = "FK_iPhuongTien";
+            // 
+            // dNgayThue
+            // 
+            this.dNgayThue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dNgayThue.DataPropertyName = "dNgayThue";
+            this.dNgayThue.HeaderText = "Ngày Thuê";
+            this.dNgayThue.MinimumWidth = 6;
+            this.dNgayThue.Name = "dNgayThue";
+            // 
+            // dNgayHenTra
+            // 
+            this.dNgayHenTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dNgayHenTra.DataPropertyName = "dNgayHenTra";
+            this.dNgayHenTra.HeaderText = "Ngày Trả";
+            this.dNgayHenTra.MinimumWidth = 6;
+            this.dNgayHenTra.Name = "dNgayHenTra";
+            // 
+            // FK_sCMND
+            // 
+            this.FK_sCMND.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FK_sCMND.DataPropertyName = "FK_sCMND";
+            this.FK_sCMND.HeaderText = "CMND KH";
+            this.FK_sCMND.MinimumWidth = 6;
+            this.FK_sCMND.Name = "FK_sCMND";
+            // 
+            // FK_sCMNDnv
+            // 
+            this.FK_sCMNDnv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FK_sCMNDnv.DataPropertyName = "FK_sCMNDnv";
+            this.FK_sCMNDnv.HeaderText = "CMND NV";
+            this.FK_sCMNDnv.MinimumWidth = 6;
+            this.FK_sCMNDnv.Name = "FK_sCMNDnv";
+            // 
+            // FK_iPhieuX
+            // 
+            this.FK_iPhieuX.DataPropertyName = "FK_iPhieuX";
+            this.FK_iPhieuX.HeaderText = "Id Phiếu Nhập";
+            this.FK_iPhieuX.MinimumWidth = 6;
+            this.FK_iPhieuX.Name = "FK_iPhieuX";
+            this.FK_iPhieuX.Width = 125;
             // 
             // btnLamMoi
             // 
@@ -216,14 +272,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.btnSua.TextColor = System.Drawing.Color.White;
             this.btnSua.UseVisualStyleBackColor = false;
             // 
-            // tbCMNDKKH
-            // 
-            this.tbCMNDKKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbCMNDKKH.Location = new System.Drawing.Point(174, 164);
-            this.tbCMNDKKH.Name = "tbCMNDKKH";
-            this.tbCMNDKKH.Size = new System.Drawing.Size(282, 27);
-            this.tbCMNDKKH.TabIndex = 13;
-            // 
             // errorProviderHopDong
             // 
             this.errorProviderHopDong.ContainerControl = this;
@@ -278,14 +326,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.lbDSHopDong.TabIndex = 23;
             this.lbDSHopDong.Text = "DANH SÁCH HỢP ĐỒNG";
             // 
-            // tbCMNDKNV
-            // 
-            this.tbCMNDKNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbCMNDKNV.Location = new System.Drawing.Point(686, 159);
-            this.tbCMNDKNV.Name = "tbCMNDKNV";
-            this.tbCMNDKNV.Size = new System.Drawing.Size(291, 27);
-            this.tbCMNDKNV.TabIndex = 9;
-            // 
             // lbTrongTai
             // 
             this.lbTrongTai.AutoSize = true;
@@ -335,6 +375,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
             // 
             // plThongTinNCC
             // 
+            this.plThongTinNCC.Controls.Add(this.cbCNMDKH);
+            this.plThongTinNCC.Controls.Add(this.cbCMNDNV);
             this.plThongTinNCC.Controls.Add(this.lblTienThuePT);
             this.plThongTinNCC.Controls.Add(this.label7);
             this.plThongTinNCC.Controls.Add(this.lblTongTienDatCoc);
@@ -350,10 +392,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.plThongTinNCC.Controls.Add(this.btnThem);
             this.plThongTinNCC.Controls.Add(this.lbPhuongTienN);
             this.plThongTinNCC.Controls.Add(this.btnSua);
-            this.plThongTinNCC.Controls.Add(this.tbCMNDKKH);
             this.plThongTinNCC.Controls.Add(this.lbHangSX);
             this.plThongTinNCC.Controls.Add(this.lbSL);
-            this.plThongTinNCC.Controls.Add(this.tbCMNDKNV);
             this.plThongTinNCC.Controls.Add(this.lbCMNDNV);
             this.plThongTinNCC.Controls.Add(this.lbTrongTai);
             this.plThongTinNCC.Controls.Add(this.label1);
@@ -449,61 +489,21 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.dtpNgayThue.Size = new System.Drawing.Size(291, 30);
             this.dtpNgayThue.TabIndex = 32;
             // 
-            // PK_iHopDong
+            // cbCMNDNV
             // 
-            this.PK_iHopDong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PK_iHopDong.DataPropertyName = "PK_iHopDong";
-            this.PK_iHopDong.HeaderText = "idHĐ";
-            this.PK_iHopDong.MinimumWidth = 6;
-            this.PK_iHopDong.Name = "PK_iHopDong";
+            this.cbCMNDNV.FormattingEnabled = true;
+            this.cbCMNDNV.Location = new System.Drawing.Point(686, 162);
+            this.cbCMNDNV.Name = "cbCMNDNV";
+            this.cbCMNDNV.Size = new System.Drawing.Size(291, 24);
+            this.cbCMNDNV.TabIndex = 43;
             // 
-            // FK_iPhuongTien
+            // cbCNMDKH
             // 
-            this.FK_iPhuongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FK_iPhuongTien.DataPropertyName = "FK_iPhuongTien";
-            this.FK_iPhuongTien.HeaderText = "Id Phương Tiện";
-            this.FK_iPhuongTien.MinimumWidth = 6;
-            this.FK_iPhuongTien.Name = "FK_iPhuongTien";
-            // 
-            // dNgayThue
-            // 
-            this.dNgayThue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dNgayThue.DataPropertyName = "dNgayThue";
-            this.dNgayThue.HeaderText = "Ngày Thuê";
-            this.dNgayThue.MinimumWidth = 6;
-            this.dNgayThue.Name = "dNgayThue";
-            // 
-            // dNgayHenTra
-            // 
-            this.dNgayHenTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dNgayHenTra.DataPropertyName = "dNgayHenTra";
-            this.dNgayHenTra.HeaderText = "Ngày Trả";
-            this.dNgayHenTra.MinimumWidth = 6;
-            this.dNgayHenTra.Name = "dNgayHenTra";
-            // 
-            // FK_sCMND
-            // 
-            this.FK_sCMND.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FK_sCMND.DataPropertyName = "FK_sCMND";
-            this.FK_sCMND.HeaderText = "CMND KH";
-            this.FK_sCMND.MinimumWidth = 6;
-            this.FK_sCMND.Name = "FK_sCMND";
-            // 
-            // FK_sCMNDnv
-            // 
-            this.FK_sCMNDnv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FK_sCMNDnv.DataPropertyName = "FK_sCMNDnv";
-            this.FK_sCMNDnv.HeaderText = "CMND NV";
-            this.FK_sCMNDnv.MinimumWidth = 6;
-            this.FK_sCMNDnv.Name = "FK_sCMNDnv";
-            // 
-            // FK_iPhieuX
-            // 
-            this.FK_iPhieuX.DataPropertyName = "FK_iPhieuX";
-            this.FK_iPhieuX.HeaderText = "Id Phiếu Nhập";
-            this.FK_iPhieuX.MinimumWidth = 6;
-            this.FK_iPhieuX.Name = "FK_iPhieuX";
-            this.FK_iPhieuX.Width = 125;
+            this.cbCNMDKH.FormattingEnabled = true;
+            this.cbCNMDKH.Location = new System.Drawing.Point(174, 166);
+            this.cbCNMDKH.Name = "cbCNMDKH";
+            this.cbCNMDKH.Size = new System.Drawing.Size(282, 24);
+            this.cbCNMDKH.TabIndex = 44;
             // 
             // hopDong
             // 
@@ -538,7 +538,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
         private PresentationLayer.Custom.VBButton btnThem;
         private System.Windows.Forms.Label lbPhuongTienN;
         private PresentationLayer.Custom.VBButton btnSua;
-        private System.Windows.Forms.TextBox tbCMNDKKH;
         private System.Windows.Forms.ErrorProvider errorProviderHopDong;
         private System.Windows.Forms.Label lbDSHopDong;
         private System.Windows.Forms.Panel plDSNCC;
@@ -546,7 +545,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
         private System.Windows.Forms.Panel plThongTinNCC;
         private System.Windows.Forms.Label lbHangSX;
         private System.Windows.Forms.Label lbSL;
-        private System.Windows.Forms.TextBox tbCMNDKNV;
         private System.Windows.Forms.Label lbCMNDNV;
         private System.Windows.Forms.Label lbTrongTai;
         private System.Windows.Forms.Label label1;
@@ -567,5 +565,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_sCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_sCMNDnv;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_iPhieuX;
+        private System.Windows.Forms.ComboBox cbCMNDNV;
+        private System.Windows.Forms.ComboBox cbCNMDKH;
     }
 }
