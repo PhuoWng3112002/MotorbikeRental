@@ -515,7 +515,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.Controls.Add(this.plDSNCC);
             this.Controls.Add(this.plThongTinNCC);
             this.Name = "hopDong";
-            this.Text = "hopDong";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderHopDong)).EndInit();
             this.plDSNCC.ResumeLayout(false);
