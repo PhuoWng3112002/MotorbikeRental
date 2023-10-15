@@ -32,20 +32,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.components = new System.ComponentModel.Container();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvHopDong = new System.Windows.Forms.DataGridView();
-            this.PK_iHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dNgayHenTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_sCMNDnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_iPhieuX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnLamMoi = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.btnTimKiem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.btnXoa = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.tbIDPhuongTien = new System.Windows.Forms.TextBox();
-            this.btnThem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.lbPhuongTienN = new System.Windows.Forms.Label();
-            this.btnSua = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.errorProviderHopDong = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.lbHangSX = new System.Windows.Forms.Label();
@@ -58,16 +46,30 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.lbNCC = new System.Windows.Forms.Label();
             this.plDSNCC = new System.Windows.Forms.Panel();
             this.plThongTinNCC = new System.Windows.Forms.Panel();
+            this.cbCNMDKH = new System.Windows.Forms.ComboBox();
+            this.cbCMNDNV = new System.Windows.Forms.ComboBox();
             this.lblTienThuePT = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lblTongTienDatCoc = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhieuXuat = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dpNgayHenTra = new System.Windows.Forms.DateTimePicker();
             this.dtpNgayThue = new System.Windows.Forms.DateTimePicker();
-            this.cbCMNDNV = new System.Windows.Forms.ComboBox();
-            this.cbCNMDKH = new System.Windows.Forms.ComboBox();
+            this.PK_iHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fTongTienDatCoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fTienThuePT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dNgayHenTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_sCMNDnv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_iPhieuX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLamMoi = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnTimKiem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnXoa = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnThem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnSua = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderHopDong)).BeginInit();
             this.plDSNCC.SuspendLayout();
@@ -85,10 +87,14 @@ namespace MotorbikeRental.QuanLyChoThueXe
             // 
             // dgvHopDong
             // 
+            this.dgvHopDong.AllowUserToAddRows = false;
+            this.dgvHopDong.AllowUserToDeleteRows = false;
             this.dgvHopDong.BackgroundColor = System.Drawing.Color.White;
             this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHopDong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PK_iHopDong,
+            this.fTongTienDatCoc,
+            this.fTienThuePT,
             this.FK_iPhuongTien,
             this.dNgayThue,
             this.dNgayHenTra,
@@ -98,123 +104,13 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.dgvHopDong.GridColor = System.Drawing.Color.White;
             this.dgvHopDong.Location = new System.Drawing.Point(27, 72);
             this.dgvHopDong.Name = "dgvHopDong";
+            this.dgvHopDong.ReadOnly = true;
             this.dgvHopDong.RowHeadersWidth = 51;
             this.dgvHopDong.RowTemplate.Height = 24;
-            this.dgvHopDong.Size = new System.Drawing.Size(958, 284);
+            this.dgvHopDong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHopDong.Size = new System.Drawing.Size(1171, 284);
             this.dgvHopDong.TabIndex = 4;
-            // 
-            // PK_iHopDong
-            // 
-            this.PK_iHopDong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PK_iHopDong.DataPropertyName = "PK_iHopDong";
-            this.PK_iHopDong.HeaderText = "idHĐ";
-            this.PK_iHopDong.MinimumWidth = 6;
-            this.PK_iHopDong.Name = "PK_iHopDong";
-            // 
-            // FK_iPhuongTien
-            // 
-            this.FK_iPhuongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FK_iPhuongTien.DataPropertyName = "FK_iPhuongTien";
-            this.FK_iPhuongTien.HeaderText = "Id Phương Tiện";
-            this.FK_iPhuongTien.MinimumWidth = 6;
-            this.FK_iPhuongTien.Name = "FK_iPhuongTien";
-            // 
-            // dNgayThue
-            // 
-            this.dNgayThue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dNgayThue.DataPropertyName = "dNgayThue";
-            this.dNgayThue.HeaderText = "Ngày Thuê";
-            this.dNgayThue.MinimumWidth = 6;
-            this.dNgayThue.Name = "dNgayThue";
-            // 
-            // dNgayHenTra
-            // 
-            this.dNgayHenTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dNgayHenTra.DataPropertyName = "dNgayHenTra";
-            this.dNgayHenTra.HeaderText = "Ngày Trả";
-            this.dNgayHenTra.MinimumWidth = 6;
-            this.dNgayHenTra.Name = "dNgayHenTra";
-            // 
-            // FK_sCMND
-            // 
-            this.FK_sCMND.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FK_sCMND.DataPropertyName = "FK_sCMND";
-            this.FK_sCMND.HeaderText = "CMND KH";
-            this.FK_sCMND.MinimumWidth = 6;
-            this.FK_sCMND.Name = "FK_sCMND";
-            // 
-            // FK_sCMNDnv
-            // 
-            this.FK_sCMNDnv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FK_sCMNDnv.DataPropertyName = "FK_sCMNDnv";
-            this.FK_sCMNDnv.HeaderText = "CMND NV";
-            this.FK_sCMNDnv.MinimumWidth = 6;
-            this.FK_sCMNDnv.Name = "FK_sCMNDnv";
-            // 
-            // FK_iPhieuX
-            // 
-            this.FK_iPhieuX.DataPropertyName = "FK_iPhieuX";
-            this.FK_iPhieuX.HeaderText = "Id Phiếu Nhập";
-            this.FK_iPhieuX.MinimumWidth = 6;
-            this.FK_iPhieuX.Name = "FK_iPhieuX";
-            this.FK_iPhieuX.Width = 125;
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
-            this.btnLamMoi.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnLamMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnLamMoi.BorderRadius = 14;
-            this.btnLamMoi.BorderSize = 2;
-            this.btnLamMoi.FlatAppearance.BorderSize = 0;
-            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
-            this.btnLamMoi.Location = new System.Drawing.Point(835, 344);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(150, 40);
-            this.btnLamMoi.TabIndex = 3;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.TextColor = System.Drawing.Color.Black;
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiem.BorderRadius = 15;
-            this.btnTimKiem.BorderSize = 0;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(635, 344);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(150, 40);
-            this.btnTimKiem.TabIndex = 4;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextColor = System.Drawing.Color.White;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.btnXoa.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoa.BorderRadius = 14;
-            this.btnXoa.BorderSize = 0;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(435, 344);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(150, 40);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextColor = System.Drawing.Color.White;
-            this.btnXoa.UseVisualStyleBackColor = false;
+            this.dgvHopDong.SelectionChanged += new System.EventHandler(this.dgvHopDong_SelectionChanged);
             // 
             // tbIDPhuongTien
             // 
@@ -223,25 +119,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.tbIDPhuongTien.Name = "tbIDPhuongTien";
             this.tbIDPhuongTien.Size = new System.Drawing.Size(282, 27);
             this.tbIDPhuongTien.TabIndex = 15;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 15;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(35, 344);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(150, 40);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
+            this.tbIDPhuongTien.Text = "1";
             // 
             // lbPhuongTienN
             // 
@@ -252,25 +130,6 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.lbPhuongTienN.Size = new System.Drawing.Size(115, 20);
             this.lbPhuongTienN.TabIndex = 14;
             this.lbPhuongTienN.Text = "ID Phương Tiện";
-            // 
-            // btnSua
-            // 
-            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
-            this.btnSua.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
-            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSua.BorderRadius = 15;
-            this.btnSua.BorderSize = 0;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(235, 344);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(150, 40);
-            this.btnSua.TabIndex = 1;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextColor = System.Drawing.Color.White;
-            this.btnSua.UseVisualStyleBackColor = false;
             // 
             // errorProviderHopDong
             // 
@@ -353,6 +212,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.tbIDHopDong.Name = "tbIDHopDong";
             this.tbIDHopDong.Size = new System.Drawing.Size(282, 27);
             this.tbIDHopDong.TabIndex = 2;
+            this.tbIDHopDong.Text = "2";
             // 
             // lbNCC
             // 
@@ -370,7 +230,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.plDSNCC.Controls.Add(this.dgvHopDong);
             this.plDSNCC.Location = new System.Drawing.Point(84, 589);
             this.plDSNCC.Name = "plDSNCC";
-            this.plDSNCC.Size = new System.Drawing.Size(1019, 377);
+            this.plDSNCC.Size = new System.Drawing.Size(1201, 377);
             this.plDSNCC.TabIndex = 25;
             // 
             // plThongTinNCC
@@ -381,7 +241,7 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.plThongTinNCC.Controls.Add(this.label7);
             this.plThongTinNCC.Controls.Add(this.lblTongTienDatCoc);
             this.plThongTinNCC.Controls.Add(this.label5);
-            this.plThongTinNCC.Controls.Add(this.textBox1);
+            this.plThongTinNCC.Controls.Add(this.txtPhieuXuat);
             this.plThongTinNCC.Controls.Add(this.label4);
             this.plThongTinNCC.Controls.Add(this.dpNgayHenTra);
             this.plThongTinNCC.Controls.Add(this.dtpNgayThue);
@@ -403,6 +263,22 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.plThongTinNCC.Name = "plThongTinNCC";
             this.plThongTinNCC.Size = new System.Drawing.Size(1019, 462);
             this.plThongTinNCC.TabIndex = 24;
+            // 
+            // cbCNMDKH
+            // 
+            this.cbCNMDKH.FormattingEnabled = true;
+            this.cbCNMDKH.Location = new System.Drawing.Point(174, 166);
+            this.cbCNMDKH.Name = "cbCNMDKH";
+            this.cbCNMDKH.Size = new System.Drawing.Size(282, 24);
+            this.cbCNMDKH.TabIndex = 44;
+            // 
+            // cbCMNDNV
+            // 
+            this.cbCMNDNV.FormattingEnabled = true;
+            this.cbCMNDNV.Location = new System.Drawing.Point(686, 162);
+            this.cbCMNDNV.Name = "cbCMNDNV";
+            this.cbCMNDNV.Size = new System.Drawing.Size(291, 24);
+            this.cbCMNDNV.TabIndex = 43;
             // 
             // lblTienThuePT
             // 
@@ -447,13 +323,14 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.label5.TabIndex = 36;
             this.label5.Text = "Tổng Tiền Đặt Cọc : ";
             // 
-            // textBox1
+            // txtPhieuXuat
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(174, 228);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 27);
-            this.textBox1.TabIndex = 35;
+            this.txtPhieuXuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtPhieuXuat.Location = new System.Drawing.Point(174, 228);
+            this.txtPhieuXuat.Name = "txtPhieuXuat";
+            this.txtPhieuXuat.Size = new System.Drawing.Size(282, 27);
+            this.txtPhieuXuat.TabIndex = 35;
+            this.txtPhieuXuat.Text = "1";
             // 
             // label4
             // 
@@ -489,32 +366,197 @@ namespace MotorbikeRental.QuanLyChoThueXe
             this.dtpNgayThue.Size = new System.Drawing.Size(291, 30);
             this.dtpNgayThue.TabIndex = 32;
             // 
-            // cbCMNDNV
+            // PK_iHopDong
             // 
-            this.cbCMNDNV.FormattingEnabled = true;
-            this.cbCMNDNV.Location = new System.Drawing.Point(686, 162);
-            this.cbCMNDNV.Name = "cbCMNDNV";
-            this.cbCMNDNV.Size = new System.Drawing.Size(291, 24);
-            this.cbCMNDNV.TabIndex = 43;
+            this.PK_iHopDong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PK_iHopDong.DataPropertyName = "PK_iHopDong";
+            this.PK_iHopDong.HeaderText = "idHĐ";
+            this.PK_iHopDong.MinimumWidth = 6;
+            this.PK_iHopDong.Name = "PK_iHopDong";
+            this.PK_iHopDong.ReadOnly = true;
             // 
-            // cbCNMDKH
+            // fTongTienDatCoc
             // 
-            this.cbCNMDKH.FormattingEnabled = true;
-            this.cbCNMDKH.Location = new System.Drawing.Point(174, 166);
-            this.cbCNMDKH.Name = "cbCNMDKH";
-            this.cbCNMDKH.Size = new System.Drawing.Size(282, 24);
-            this.cbCNMDKH.TabIndex = 44;
+            this.fTongTienDatCoc.DataPropertyName = "fTongTienDatCoc";
+            this.fTongTienDatCoc.HeaderText = "Tổng tiền";
+            this.fTongTienDatCoc.MinimumWidth = 6;
+            this.fTongTienDatCoc.Name = "fTongTienDatCoc";
+            this.fTongTienDatCoc.ReadOnly = true;
+            this.fTongTienDatCoc.Width = 125;
+            // 
+            // fTienThuePT
+            // 
+            this.fTienThuePT.DataPropertyName = "fTienThuePT";
+            this.fTienThuePT.HeaderText = "Tiền Thuê PT";
+            this.fTienThuePT.MinimumWidth = 6;
+            this.fTienThuePT.Name = "fTienThuePT";
+            this.fTienThuePT.ReadOnly = true;
+            this.fTienThuePT.Width = 125;
+            // 
+            // FK_iPhuongTien
+            // 
+            this.FK_iPhuongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FK_iPhuongTien.DataPropertyName = "FK_iPhuongTien";
+            this.FK_iPhuongTien.HeaderText = "Id Phương Tiện";
+            this.FK_iPhuongTien.MinimumWidth = 6;
+            this.FK_iPhuongTien.Name = "FK_iPhuongTien";
+            this.FK_iPhuongTien.ReadOnly = true;
+            // 
+            // dNgayThue
+            // 
+            this.dNgayThue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dNgayThue.DataPropertyName = "dNgayThue";
+            this.dNgayThue.HeaderText = "Ngày Thuê";
+            this.dNgayThue.MinimumWidth = 6;
+            this.dNgayThue.Name = "dNgayThue";
+            this.dNgayThue.ReadOnly = true;
+            // 
+            // dNgayHenTra
+            // 
+            this.dNgayHenTra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dNgayHenTra.DataPropertyName = "dNgayHenTra";
+            this.dNgayHenTra.HeaderText = "Ngày Trả";
+            this.dNgayHenTra.MinimumWidth = 6;
+            this.dNgayHenTra.Name = "dNgayHenTra";
+            this.dNgayHenTra.ReadOnly = true;
+            // 
+            // FK_sCMND
+            // 
+            this.FK_sCMND.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FK_sCMND.DataPropertyName = "FK_sCMND";
+            this.FK_sCMND.HeaderText = "CMND KH";
+            this.FK_sCMND.MinimumWidth = 6;
+            this.FK_sCMND.Name = "FK_sCMND";
+            this.FK_sCMND.ReadOnly = true;
+            // 
+            // FK_sCMNDnv
+            // 
+            this.FK_sCMNDnv.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.FK_sCMNDnv.DataPropertyName = "FK_sCMNDnv";
+            this.FK_sCMNDnv.HeaderText = "CMND NV";
+            this.FK_sCMNDnv.MinimumWidth = 6;
+            this.FK_sCMNDnv.Name = "FK_sCMNDnv";
+            this.FK_sCMNDnv.ReadOnly = true;
+            // 
+            // FK_iPhieuX
+            // 
+            this.FK_iPhieuX.DataPropertyName = "FK_iPhieuX";
+            this.FK_iPhieuX.HeaderText = "Id Phiếu Nhập";
+            this.FK_iPhieuX.MinimumWidth = 6;
+            this.FK_iPhieuX.Name = "FK_iPhieuX";
+            this.FK_iPhieuX.ReadOnly = true;
+            this.FK_iPhieuX.Width = 125;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
+            this.btnLamMoi.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnLamMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnLamMoi.BorderRadius = 14;
+            this.btnLamMoi.BorderSize = 2;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Location = new System.Drawing.Point(835, 344);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(150, 40);
+            this.btnLamMoi.TabIndex = 3;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextColor = System.Drawing.Color.Black;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiem.BorderRadius = 15;
+            this.btnTimKiem.BorderSize = 0;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(635, 344);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(150, 40);
+            this.btnTimKiem.TabIndex = 4;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextColor = System.Drawing.Color.White;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnXoa.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoa.BorderRadius = 14;
+            this.btnXoa.BorderSize = 0;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(435, 344);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(150, 40);
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextColor = System.Drawing.Color.White;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnThem
+            // 
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 15;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(35, 344);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(150, 40);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnSua
+            // 
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
+            this.btnSua.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
+            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSua.BorderRadius = 15;
+            this.btnSua.BorderSize = 0;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(235, 344);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(150, 40);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextColor = System.Drawing.Color.White;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // hopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1156, 978);
+            this.ClientSize = new System.Drawing.Size(1314, 1004);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbDSHopDong);
             this.Controls.Add(this.plDSNCC);
             this.Controls.Add(this.plThongTinNCC);
             this.Name = "hopDong";
+            this.Load += new System.EventHandler(this.hopDong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderHopDong)).EndInit();
             this.plDSNCC.ResumeLayout(false);
@@ -551,20 +593,22 @@ namespace MotorbikeRental.QuanLyChoThueXe
         private System.Windows.Forms.Label lbNCC;
         private System.Windows.Forms.DateTimePicker dtpNgayThue;
         private System.Windows.Forms.DateTimePicker dpNgayHenTra;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhieuXuat;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblTongTienDatCoc;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblTienThuePT;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbCMNDNV;
+        private System.Windows.Forms.ComboBox cbCNMDKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn PK_iHopDong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fTongTienDatCoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fTienThuePT;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_iPhuongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn dNgayThue;
         private System.Windows.Forms.DataGridViewTextBoxColumn dNgayHenTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_sCMND;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_sCMNDnv;
         private System.Windows.Forms.DataGridViewTextBoxColumn FK_iPhieuX;
-        private System.Windows.Forms.ComboBox cbCMNDNV;
-        private System.Windows.Forms.ComboBox cbCNMDKH;
     }
 }

@@ -239,6 +239,8 @@ add constraint FK_BG_HD foreign key (PK_iHopDong) references tblBanGiao(PK_iHopD
 	constraint FK_CTNV_HD foreign key (FK_sCMNDnv) references tblCTNV(PK_sCMNDnv),
 	constraint FK_PT_HD foreign key (FK_iPhuongTien) references tblPhuongTien(PK_iPhuongTien)
 
+alter table tblHopDong
+drop constraint FK_BG_HD
 alter table tblNhanVien
 add 
 	constraint FK_CV_NV foreign key (FK_iChucVu) references tblChucVu(PK_iChucVu)
@@ -250,6 +252,13 @@ add
 
 
 /*******************************************************************************************************/
+SELECT *FROM tblHopDong
+SELECT *FROM tblBanGiao
+SELECT *FROM tblCTNguoiDung
+SELECT *FROM tblCTNV
+SELECT *FROM tblPhuongTien
+SELECT *FROM tblPhieuXuat
+SELECT * FROM tblLoaiPhuongTien
 
 /*CREATE VIEW*/
 /* gp 2 tblND & tblNV*/
@@ -264,15 +273,18 @@ select * from vv_TaiKhoan
 /* gp 2 tblCTND & tblCTNV*/
 create view vv_CTTaiKhoan 
 AS
-SELECT *FROM tblCTNguoiDung
+SELECT * FROM tblCTNguoiDung
 UNION
-SELECT *FROM tblCTNV
+SELECT * FROM tblCTNV
 go
+
+ ALTER table tblCTNV add  sChucVu nvarchar(100)
+
 
 select * from tblCTNV
 select * from tblCTNguoiDung
 
-select * from vv_CTTaiKhoan
+ 
 /**/
 
 create view vv_TaiKhoan_ChucVu 
@@ -340,6 +352,7 @@ BEGIN
 	WHERE sTK = @tenTK
 END
 
+-- dang loi oi day
 CREATE proc sp_ThemND
 	@CMND varchar(12),
 	@TK nvarchar(50),
@@ -498,3 +511,22 @@ GO
 
 select * from tblAnhPT
 
+-- them hop dong
+CREATE proc proc_ThemHopDong
+    @PK_iHopDong int ,
+	@FK_iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12),
+	@FK_iPhieuX int
+AS
+BEGIN
+
+	INSERT INTO tblHopDong
+	VALUES(@PK_iHopDong ,@FK_iPhuongTien , @dNgayThue ,@dNgayHenTra ,@fTongTienDatCoc , @fTienThuePT , @FK_sCMND , @FK_sCMNDnv , @FK_iPhieuX)
+END
+
+select * from tblCTNV

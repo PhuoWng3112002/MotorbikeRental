@@ -259,6 +259,7 @@ namespace MotorbikeRental.QuanLyKho
             this.btnThem.Text = "Thêm";
             this.btnThem.TextColor = System.Drawing.Color.White;
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // lbPhuongTienN
             // 
