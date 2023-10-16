@@ -529,4 +529,33 @@ BEGIN
 	VALUES(@PK_iHopDong ,@FK_iPhuongTien , @dNgayThue ,@dNgayHenTra ,@fTongTienDatCoc , @fTienThuePT , @FK_sCMND , @FK_sCMNDnv , @FK_iPhieuX)
 END
 
-select * from tblCTNV
+select * from tblHopDong
+
+CREATE proc proc_SuaHopDong
+    @PK_iHopDong int ,
+	@FK_iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12),
+	@FK_iPhieuX int
+AS
+BEGIN
+
+	UPDATE tblHopDong
+	SET  
+		FK_iPhuongTien=@FK_iPhuongTien,
+		dNgayThue= @dNgayThue ,
+		dNgayHenTra = @dNgayHenTra,
+		fTongTienDatCoc = @fTongTienDatCoc,
+		fTienThuePT = @fTienThuePT,
+		FK_sCMND = @FK_sCMND,
+		FK_sCMNDnv =  @FK_sCMNDnv,
+		FK_iPhieuX = @FK_iPhieuX
+	WHERE PK_iHopDong=@PK_iHopDong
+END
+
+
+

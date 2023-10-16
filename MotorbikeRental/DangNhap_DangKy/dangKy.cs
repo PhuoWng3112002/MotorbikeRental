@@ -316,7 +316,7 @@ namespace MotorbikeRental.DangNhap_DangKi
 
         }
 
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        public void btnDangKy_Click(object sender, EventArgs e)
         {
             string gioitinh;
             if (checkValid(sender, e))
