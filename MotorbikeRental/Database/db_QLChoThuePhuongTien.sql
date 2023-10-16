@@ -558,4 +558,56 @@ BEGIN
 END
 
 
+select * from tblPhuongTien
+select * from tblCTPhuongTien
+select * from tblBanGiao
+select * from tblCTNguoiDung
+
+-- ban giao
+CREATE OR ALTER proc proc_ThemBanGiao
+    @PK_iHopDong int ,
+	@iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@sGhiChu varchar(100),
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12)
+	
+AS
+BEGIN
+
+	INSERT INTO tblBanGiao
+	VALUES(@PK_iHopDong ,@iPhuongTien , @dNgayThue ,@dNgayHenTra ,@fTongTienDatCoc , @fTienThuePT ,@sGhiChu, @FK_sCMND , @FK_sCMNDnv )
+END
+
+
+
+
+CREATE OR ALTER proc proc_SuaBanGiao
+    @PK_iHopDong int ,
+	@iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@sGhiChu varchar(100),
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12)
+AS
+BEGIN
+
+	UPDATE tblBanGiao
+	SET  
+		iPhuongTien=@iPhuongTien,
+		dNgayThue= @dNgayThue ,
+		dNgayHenTra = @dNgayHenTra,
+		fTongTienDatCoc = @fTongTienDatCoc,
+		fTongTienThuePT = @fTienThuePT,
+		FK_sCMND = @FK_sCMND,
+		FK_sCMNDnv =  @FK_sCMNDnv,
+		sGhiChu = @sGhiChu
+	WHERE PK_iHopDong=@PK_iHopDong
+END
 
