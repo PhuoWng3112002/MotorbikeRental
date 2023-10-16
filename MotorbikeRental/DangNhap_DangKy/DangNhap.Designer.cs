@@ -32,6 +32,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DangNhap));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDangKy = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,6 +41,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.tbTK = new System.Windows.Forms.TextBox();
             this.link_DangKy = new System.Windows.Forms.LinkLabel();
             this.link_QuenMK = new System.Windows.Forms.LinkLabel();
+            this.btnDangNhap = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMK = new System.Windows.Forms.TextBox();
@@ -48,8 +50,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProviderLogin = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnDangNhap = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.btnDangKy = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_Title.SuspendLayout();
@@ -67,7 +67,26 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(398, 379);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnDangKy
+            // 
+            this.btnDangKy.BackColor = System.Drawing.Color.White;
+            this.btnDangKy.BackgroundColor = System.Drawing.Color.White;
+            this.btnDangKy.BorderColor = System.Drawing.Color.White;
+            this.btnDangKy.BorderRadius = 20;
+            this.btnDangKy.BorderSize = 1;
+            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangKy.FlatAppearance.BorderSize = 0;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.ForeColor = System.Drawing.Color.Black;
+            this.btnDangKy.Location = new System.Drawing.Point(121, 295);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(150, 50);
+            this.btnDangKy.TabIndex = 11;
+            this.btnDangKy.Text = "Đăng ký ngay";
+            this.btnDangKy.TextColor = System.Drawing.Color.Black;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // label6
             // 
@@ -78,7 +97,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label6.Size = new System.Drawing.Size(358, 138);
             this.label6.TabIndex = 10;
             this.label6.Text = resources.GetString("label6.Text");
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -89,7 +107,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label5.Size = new System.Drawing.Size(350, 108);
             this.label5.TabIndex = 0;
             this.label5.Text = "Welcome to Motorbike Rental";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
@@ -108,7 +125,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(407, 379);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // ckbHienMK
             // 
@@ -132,7 +148,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label4.Size = new System.Drawing.Size(82, 23);
             this.label4.TabIndex = 8;
             this.label4.Text = "Mật khẩu";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // tbTK
             // 
@@ -142,7 +157,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.tbTK.Name = "tbTK";
             this.tbTK.Size = new System.Drawing.Size(240, 27);
             this.tbTK.TabIndex = 7;
-            this.tbTK.TextChanged += new System.EventHandler(this.txbCMND_TextChanged);
             // 
             // link_DangKy
             // 
@@ -170,6 +184,27 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.link_QuenMK.Text = "Quên mật khẩu ?";
             this.link_QuenMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_QuenMK_LinkClicked);
             // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
+            this.btnDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
+            this.btnDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDangNhap.BorderRadius = 5;
+            this.btnDangNhap.BorderSize = 0;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangNhap.FlatAppearance.BorderSize = 0;
+            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
+            this.btnDangNhap.Location = new System.Drawing.Point(133, 280);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(176, 40);
+            this.btnDangNhap.TabIndex = 3;
+            this.btnDangNhap.Text = "ĐĂNG NHẬP";
+            this.btnDangNhap.TextColor = System.Drawing.Color.White;
+            this.btnDangNhap.UseVisualStyleBackColor = false;
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -179,7 +214,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label3.Size = new System.Drawing.Size(82, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tài khoản";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -191,7 +225,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label2.Size = new System.Drawing.Size(162, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "ĐĂNG NHẬP";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbMK
             // 
@@ -202,7 +235,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.tbMK.PasswordChar = '*';
             this.tbMK.Size = new System.Drawing.Size(240, 27);
             this.tbMK.TabIndex = 9;
-            this.tbMK.TextChanged += new System.EventHandler(this.txbMK_TextChanged);
             // 
             // panel_Title
             // 
@@ -244,7 +276,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label1.Size = new System.Drawing.Size(214, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Motorbike Rental";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
@@ -256,52 +287,10 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // errorProviderLogin
             // 
             this.errorProviderLogin.ContainerControl = this;
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
-            this.btnDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
-            this.btnDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDangNhap.BorderRadius = 5;
-            this.btnDangNhap.BorderSize = 0;
-            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangNhap.FlatAppearance.BorderSize = 0;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(133, 280);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(176, 40);
-            this.btnDangNhap.TabIndex = 3;
-            this.btnDangNhap.Text = "ĐĂNG NHẬP";
-            this.btnDangNhap.TextColor = System.Drawing.Color.White;
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // btnDangKy
-            // 
-            this.btnDangKy.BackColor = System.Drawing.Color.White;
-            this.btnDangKy.BackgroundColor = System.Drawing.Color.White;
-            this.btnDangKy.BorderColor = System.Drawing.Color.White;
-            this.btnDangKy.BorderRadius = 20;
-            this.btnDangKy.BorderSize = 1;
-            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangKy.FlatAppearance.BorderSize = 0;
-            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKy.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKy.Location = new System.Drawing.Point(121, 295);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(150, 50);
-            this.btnDangKy.TabIndex = 11;
-            this.btnDangKy.Text = "Đăng ký ngay";
-            this.btnDangKy.TextColor = System.Drawing.Color.Black;
-            this.btnDangKy.UseVisualStyleBackColor = false;
-            this.btnDangKy.Click += new System.EventHandler(this.vbButton1_Click);
             // 
             // DangNhap
             // 

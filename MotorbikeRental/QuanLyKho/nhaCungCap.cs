@@ -34,7 +34,7 @@ namespace MotorbikeRental.QuanLyKho
         private const string MS_Error = "Lỗi";
         private const string MS_Confirm = "Bạn có chắc chắn xóa không?";
         private const string MS_Warn = "Cảnh báo";
-        private const string MS_NotAccess = "Bạn không có quyền truy cập chức năng này";
+        private const string MS_Action = "Không thể xóa do tồn tại khóa ngoại";
         private const string MS_SQL = "Lỗi SQL";
         nhaCungCapBLL nhaCungCapBLL = new nhaCungCapBLL();
 
@@ -190,17 +190,33 @@ namespace MotorbikeRental.QuanLyKho
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
-            if (MessageBox.Show(MS_Confirm, MS_Warn, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            try
             {
-                if (nhaCungCapBLL.deleteById(tbNCC.Text))
+                if (MessageBox.Show(MS_Confirm, MS_Warn, MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    MessageBox.Show(MS_007, MS_Notify, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadDataToDataGridView(dgvNCC, nhaCungCapBLL.findAll());
-                    btnLamMoi_Click(sender, e);
+                    if (nhaCungCapBLL.deleteById(tbNCC.Text))
+                    {
+                        MessageBox.Show(MS_007, MS_Notify, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDataToDataGridView(dgvNCC, nhaCungCapBLL.findAll());
+                        btnLamMoi_Click(sender, e);
+                    }
+                    else
+                        MessageBox.Show(MS_008, MS_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                string error = ex.Message;
+                if (error.Contains("40"))
+                {
+                    MessageBox.Show(MS_SQL, MS_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
-                    MessageBox.Show(MS_008, MS_Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    MessageBox.Show(MS_Action, MS_Warn, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
             }
         }
 

@@ -40,8 +40,8 @@ namespace MotorbikeRental.DataAccessLayer
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_ThemAnh";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "update tblAnhPT set sUrl=@url where PK_iAnh= @id";
                     cmd.Parameters.Add("@id",PK_iAnh);
                     cmd.Parameters.Add("@url", b);
                
@@ -58,6 +58,68 @@ namespace MotorbikeRental.DataAccessLayer
             MemoryStream m = new MemoryStream();
             img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
             return m.ToArray();
+        }
+        public bool update(string PK_iAnh, Image sUrl)
+        {
+            byte[] b = ImageToByteArray(sUrl);
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = cnn.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "sp_SuaAnh";
+                    cmd.Parameters.Add("@id", PK_iAnh);
+                    cmd.Parameters.Add("@url", b);
+
+                    cnn.Open();
+                    int i = cmd.ExecuteNonQuery();  
+                    cnn.Close();
+
+                    return i > 0;
+                }
+            }
+        }
+        public bool deleteById(string iAnh)
+        {
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = cnn.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "Delete from tblAnhPT where PK_iAnh=@id ";
+                    cmd.Parameters.AddWithValue("@id", iAnh);
+                    cnn.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    cnn.Close();
+
+                    return i > 0;
+                }
+            }
+        }
+
+        public DataTable search(string PK_iAnh)
+        {
+            //byte[] b = ImageToByteArray(sUrl);
+            using (SqlConnection cnn = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = cnn.CreateCommand())
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "sp_TimKiemAnh";
+                    cmd.Parameters.AddWithValue("@id", PK_iAnh);
+                    //cmd.Parameters.AddWithValue("@url", b);
+                  
+
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        using (DataTable dt = new DataTable())
+                        {
+                            ad.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
         }
     }
 }
