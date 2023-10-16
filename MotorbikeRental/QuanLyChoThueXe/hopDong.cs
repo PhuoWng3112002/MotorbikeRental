@@ -99,8 +99,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
             int FK_iPhuongTien = Convert.ToInt32(tbIDPhuongTien.Text.Trim());
             DateTime dNgayThue = DateTime.Now;
             DateTime dNgayHenTra =  dpNgayHenTra.Value;
-            float fTongTienDatCoc = 3000;
-            float fTienThuePT =40000;
+            float fTongTienDatCoc = float.Parse(tbTongTienDatCoc.Text);
+            float fTienThuePT = float.Parse(tbTienThuePt.Text);
 
             string FK_sCMND = cbCNMDKH.Text.ToString();
             string FK_sCMNDnv = cbCMNDNV.Text.ToString();
@@ -126,7 +126,8 @@ namespace MotorbikeRental.QuanLyChoThueXe
 
                 tbIDHopDong.Text = selectedRow.Cells["PK_iHopDong"].Value.ToString();
                 tbIDPhuongTien.Text = selectedRow.Cells["FK_iPhuongTien"].Value.ToString();
-
+                tbTongTienDatCoc.Text = selectedRow.Cells["fTongTienDatCoc"].Value.ToString();
+                tbTienThuePt.Text = selectedRow.Cells["fTienThuePT"].Value.ToString();
                 foreach (KeyValuePair<string, string> item in cbCNMDKH.Items)
                 {
                     if (item.Value == selectedRow.Cells["FK_sCMND"].Value.ToString())
@@ -165,41 +166,22 @@ namespace MotorbikeRental.QuanLyChoThueXe
             int FK_iPhuongTien = Convert.ToInt32(tbIDPhuongTien.Text.Trim());
             DateTime dNgayThue = DateTime.Now;
             DateTime dNgayHenTra = dpNgayHenTra.Value;
-            float fTongTienDatCoc = 3000;
-            float fTienThuePT = 40000;
+            float fTongTienDatCoc = float.Parse(tbTongTienDatCoc.Text);
+            float fTienThuePT = float.Parse(tbTienThuePt.Text);
 
             string FK_sCMND = cbCNMDKH.Text.ToString();
             string FK_sCMNDnv = cbCMNDNV.Text.ToString();
 
             int FK_iPhieuX = Convert.ToInt32(txtPhieuXuat.Text.Trim());
-
-            try
+            if (hopDongBLL.update(PK_iHopDong, FK_iPhuongTien, dNgayThue, dNgayHenTra, fTongTienDatCoc, fTienThuePT, FK_sCMND, FK_sCMNDnv, FK_iPhieuX))
             {
-                using (SqlConnection cnn = new SqlConnection(constr))
-                {
-                    using (SqlCommand cmd = cnn.CreateCommand())
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.CommandText = "proc_SuaHopDong";
-                        cmd.Parameters.AddWithValue("@PK_iHopDong", PK_iHopDong);
-                        cmd.Parameters.AddWithValue("@FK_iPhuongTien", FK_iPhuongTien);
-                        cmd.Parameters.AddWithValue("@dNgayThue", dNgayThue);
-                        cmd.Parameters.AddWithValue("@dNgayHenTra", dNgayHenTra);
-                        cmd.Parameters.AddWithValue("@fTongTienDatCoc", fTongTienDatCoc);
-                        cmd.Parameters.AddWithValue("@fTienThuePT", fTienThuePT);
-                        cmd.Parameters.AddWithValue("@FK_sCMND", FK_sCMND);
-                        cmd.Parameters.AddWithValue("@FK_sCMNDnv", FK_sCMNDnv);
-                        cmd.Parameters.AddWithValue("@FK_iPhieuX", FK_iPhieuX);
-                        cnn.Open();
-                        cmd.ExecuteNonQuery();
-                        cnn.Close();
-                    }
-                }
-                MessageBox.Show("Sua thanh cong ");
+                MessageBox.Show("Thanh cong");
                 hopDong_Load(null, null);
-
             }
-            catch { MessageBox.Show("Loi"); }
+            else
+            {
+                MessageBox.Show("That bai");
+            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
