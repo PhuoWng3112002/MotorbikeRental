@@ -39,5 +39,30 @@ namespace MotorbikeRental.BusinessLogicLayer
 
             return true;
         }
+        public bool update(string PK_iAnh, Image sUrl)
+        {
+
+            if (string.IsNullOrEmpty(PK_iAnh))
+                return false;
+
+            else
+                return anhDAL.insert(PK_iAnh, sUrl);
+        }
+        public bool deleteById(string iAnh)
+        {
+            if (string.IsNullOrEmpty(iAnh))
+            {
+                return false;
+            }
+            return anhDAL.deleteById(iAnh);
+        }
+        public DataTable search(string PK_iAnh)
+        {
+
+            if (string.IsNullOrEmpty(PK_iAnh))
+                return null;
+            return anhDAL.search(PK_iAnh);
+        }
+
     }
 }

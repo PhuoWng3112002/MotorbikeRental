@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\anhBLL.cs" />
     <Compile Include="BusinessLogicLayer\nhaCungCapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\phuongTienBLL.cs" />
     <Compile Include="BusinessLogicLayer\quyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\taiKhoanBLL.cs" />
     <Compile Include="Custom\VBButton.cs">
@@ -71,6 +72,7 @@
     </Compile>
     <Compile Include="DataAccessLayer\anhDAL.cs" />
     <Compile Include="DataAccessLayer\nhaCungCapDAL.cs" />
+    <Compile Include="DataAccessLayer\phuongTienDAL.cs" />
     <Compile Include="DataAccessLayer\quyenDAL.cs" />
     <Compile Include="DataAccessLayer\taiKhoanDAL.cs" />
     <Compile Include="LayoutMaster.cs">

@@ -30,35 +30,35 @@ namespace MotorbikeRental.QuanLyKhachHang
         private void InitializeComponent()
         {
             this.panelTTPT = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnTimKiem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tbPhanKhoi = new System.Windows.Forms.TextBox();
             this.lbsPhanKhoi = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbMaPT = new System.Windows.Forms.TextBox();
             this.lbAnh = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnTimKiem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.dgvAnhPT = new System.Windows.Forms.DataGridView();
+            this.PK_iDanhGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDanhGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sCmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelDSPT = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panelKHEnable = new System.Windows.Forms.Panel();
             this.vbButton1 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.vbButton4 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.vbButton2 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.vbButton3 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.vbButton5 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.PK_iDanhGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDanhGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sCmt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_iPhuongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FK_sCMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTTPT.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnhPT)).BeginInit();
@@ -84,6 +84,94 @@ namespace MotorbikeRental.QuanLyKhachHang
             this.panelTTPT.Name = "panelTTPT";
             this.panelTTPT.Size = new System.Drawing.Size(962, 284);
             this.panelTTPT.TabIndex = 8;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(181, 139);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(150, 24);
+            this.comboBox1.TabIndex = 14;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox2.Location = new System.Drawing.Point(658, 178);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(282, 27);
+            this.textBox2.TabIndex = 13;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label6.Location = new System.Drawing.Point(509, 178);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(140, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "CMND Khách hàng";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox1.Location = new System.Drawing.Point(658, 139);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(282, 27);
+            this.textBox1.TabIndex = 11;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.49138F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.50862F));
+            this.tableLayoutPanel1.Controls.Add(this.btnTimKiem, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBox3, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.94805F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(915, 63);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTimKiem.BorderRadius = 15;
+            this.btnTimKiem.BorderSize = 0;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btnTimKiem.Location = new System.Drawing.Point(729, 11);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(128, 40);
+            this.btnTimKiem.TabIndex = 16;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.TextColor = System.Drawing.Color.White;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.textBox3.Location = new System.Drawing.Point(3, 13);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(666, 37);
+            this.textBox3.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(509, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(93, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Phương tiện";
             // 
             // label5
             // 
@@ -143,39 +231,6 @@ namespace MotorbikeRental.QuanLyKhachHang
             this.lbAnh.TabIndex = 1;
             this.lbAnh.Text = "Mã đánh giá";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.49138F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.50862F));
-            this.tableLayoutPanel1.Controls.Add(this.btnTimKiem, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.94805F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(915, 63);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.btnTimKiem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTimKiem.BorderRadius = 15;
-            this.btnTimKiem.BorderSize = 0;
-            this.btnTimKiem.FlatAppearance.BorderSize = 0;
-            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(729, 11);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(128, 40);
-            this.btnTimKiem.TabIndex = 16;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.TextColor = System.Drawing.Color.White;
-            this.btnTimKiem.UseVisualStyleBackColor = false;
-            // 
             // dgvAnhPT
             // 
             this.dgvAnhPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -191,6 +246,46 @@ namespace MotorbikeRental.QuanLyKhachHang
             this.dgvAnhPT.RowTemplate.Height = 24;
             this.dgvAnhPT.Size = new System.Drawing.Size(912, 312);
             this.dgvAnhPT.TabIndex = 1;
+            // 
+            // PK_iDanhGia
+            // 
+            this.PK_iDanhGia.DataPropertyName = "PK_iDanhGia";
+            this.PK_iDanhGia.HeaderText = "Mã đánh giá";
+            this.PK_iDanhGia.MinimumWidth = 6;
+            this.PK_iDanhGia.Name = "PK_iDanhGia";
+            this.PK_iDanhGia.Width = 125;
+            // 
+            // sDanhGia
+            // 
+            this.sDanhGia.DataPropertyName = "sDanhGia";
+            this.sDanhGia.HeaderText = "Đánh giá";
+            this.sDanhGia.MinimumWidth = 6;
+            this.sDanhGia.Name = "sDanhGia";
+            this.sDanhGia.Width = 125;
+            // 
+            // sCmt
+            // 
+            this.sCmt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.sCmt.DataPropertyName = "sCmt";
+            this.sCmt.HeaderText = "Nội dung";
+            this.sCmt.MinimumWidth = 6;
+            this.sCmt.Name = "sCmt";
+            // 
+            // FK_iPhuongTien
+            // 
+            this.FK_iPhuongTien.DataPropertyName = "FK_iPhuongTien";
+            this.FK_iPhuongTien.HeaderText = "Phương tiện";
+            this.FK_iPhuongTien.MinimumWidth = 6;
+            this.FK_iPhuongTien.Name = "FK_iPhuongTien";
+            this.FK_iPhuongTien.Width = 125;
+            // 
+            // FK_sCMND
+            // 
+            this.FK_sCMND.DataPropertyName = "FK_sCMND";
+            this.FK_sCMND.HeaderText = "CMND Khách hàng";
+            this.FK_sCMND.MinimumWidth = 6;
+            this.FK_sCMND.Name = "FK_sCMND";
+            this.FK_sCMND.Width = 125;
             // 
             // panelDSPT
             // 
@@ -220,52 +315,6 @@ namespace MotorbikeRental.QuanLyKhachHang
             this.label1.Size = new System.Drawing.Size(305, 32);
             this.label1.TabIndex = 7;
             this.label1.Text = "KHÁCH HÀNG ĐÁNH GIÁ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(658, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(282, 27);
-            this.textBox1.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(509, 139);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 20);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Phương tiện";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(658, 178);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(282, 27);
-            this.textBox2.TabIndex = 13;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(509, 178);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "CMND Khách hàng";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox3.Location = new System.Drawing.Point(3, 13);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(666, 37);
-            this.textBox3.TabIndex = 14;
             // 
             // panelKHEnable
             // 
@@ -383,55 +432,6 @@ namespace MotorbikeRental.QuanLyKhachHang
             this.vbButton5.UseVisualStyleBackColor = false;
             this.vbButton5.Click += new System.EventHandler(this.vbButton5_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(181, 139);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 24);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // PK_iDanhGia
-            // 
-            this.PK_iDanhGia.DataPropertyName = "PK_iDanhGia";
-            this.PK_iDanhGia.HeaderText = "Mã đánh giá";
-            this.PK_iDanhGia.MinimumWidth = 6;
-            this.PK_iDanhGia.Name = "PK_iDanhGia";
-            this.PK_iDanhGia.Width = 125;
-            // 
-            // sDanhGia
-            // 
-            this.sDanhGia.DataPropertyName = "sDanhGia";
-            this.sDanhGia.HeaderText = "Đánh giá";
-            this.sDanhGia.MinimumWidth = 6;
-            this.sDanhGia.Name = "sDanhGia";
-            this.sDanhGia.Width = 125;
-            // 
-            // sCmt
-            // 
-            this.sCmt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.sCmt.DataPropertyName = "sCmt";
-            this.sCmt.HeaderText = "Nội dung";
-            this.sCmt.MinimumWidth = 6;
-            this.sCmt.Name = "sCmt";
-            // 
-            // FK_iPhuongTien
-            // 
-            this.FK_iPhuongTien.DataPropertyName = "FK_iPhuongTien";
-            this.FK_iPhuongTien.HeaderText = "Phương tiện";
-            this.FK_iPhuongTien.MinimumWidth = 6;
-            this.FK_iPhuongTien.Name = "FK_iPhuongTien";
-            this.FK_iPhuongTien.Width = 125;
-            // 
-            // FK_sCMND
-            // 
-            this.FK_sCMND.DataPropertyName = "FK_sCMND";
-            this.FK_sCMND.HeaderText = "CMND Khách hàng";
-            this.FK_sCMND.MinimumWidth = 6;
-            this.FK_sCMND.Name = "FK_sCMND";
-            this.FK_sCMND.Width = 125;
-            // 
             // danhGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -443,6 +443,7 @@ namespace MotorbikeRental.QuanLyKhachHang
             this.Controls.Add(this.label1);
             this.Name = "danhGia";
             this.Text = "danhGia";
+            this.Load += new System.EventHandler(this.danhGia_Load);
             this.panelTTPT.ResumeLayout(false);
             this.panelTTPT.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

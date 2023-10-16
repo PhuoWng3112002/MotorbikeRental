@@ -51,5 +51,21 @@ namespace MotorbikeRental.QuanLyKhachHang
         {
 
         }
+
+        private void danhGia_Load(object sender, EventArgs e)
+        {
+            if (Program.maQuyen.Equals(Program.maQuyenBanHang))
+            {
+               
+                panelKHEnable.Visible = false;
+               
+            }
+            if (Program.maQuyen.Equals(Program.maQuyenQuanLy))
+            {
+
+                panelKHEnable.Visible = false;
+
+            }
+        }
     }
 }

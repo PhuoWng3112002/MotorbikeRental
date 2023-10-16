@@ -132,12 +132,7 @@ namespace MotorbikeRental.DangNhap_DangKi
 
         }
 
-        private void vbButton1_Click(object sender, EventArgs e)
-        {
-            DangKy dk = new DangNhap_DangKi.DangKy();
-            dk.Show();
-            this.Hide();
-        }
+    
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -151,36 +146,7 @@ namespace MotorbikeRental.DangNhap_DangKi
            
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbCMND_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             //LayoutMaster lm = new LayoutMaster();
@@ -210,34 +176,17 @@ namespace MotorbikeRental.DangNhap_DangKi
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txbMK_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void panel_Title_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
+            DangKy dk = new DangNhap_DangKi.DangKy();
+            dk.Show();
+            this.Hide();
         }
     }
 }
