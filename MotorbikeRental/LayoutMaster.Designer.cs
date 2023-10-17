@@ -33,6 +33,7 @@ namespace MotorbikeRental
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiKho = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNhaCungCap = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLoaiSanPham = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSanPham = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,6 +67,7 @@ namespace MotorbikeRental
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.trangChủToolStripMenuItem,
             this.quảnLýKhoToolStripMenuItem,
+            this.tsmiKho,
             this.tsmiNhaCungCap,
             this.tsmiLoaiSanPham,
             this.tsmiSanPham,
@@ -88,7 +90,7 @@ namespace MotorbikeRental
             this.đăngXuấtToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(236, 844);
+            this.menuStrip.Size = new System.Drawing.Size(234, 844);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -115,6 +117,21 @@ namespace MotorbikeRental
             this.quảnLýKhoToolStripMenuItem.Size = new System.Drawing.Size(221, 27);
             this.quảnLýKhoToolStripMenuItem.Text = "Quản lý kho";
             this.quảnLýKhoToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tsmiKho
+            // 
+            this.tsmiKho.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tsmiKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tsmiKho.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiKho.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.tsmiKho.Name = "tsmiKho";
+            this.tsmiKho.Padding = new System.Windows.Forms.Padding(10, 0, 5, 0);
+            this.tsmiKho.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tsmiKho.RightToLeftAutoMirrorImage = true;
+            this.tsmiKho.Size = new System.Drawing.Size(191, 27);
+            this.tsmiKho.Text = "Kho";
+            this.tsmiKho.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tsmiKho.Click += new System.EventHandler(this.tsmiKho_Click);
             // 
             // tsmiNhaCungCap
             // 
@@ -360,9 +377,9 @@ namespace MotorbikeRental
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(236, 0);
+            this.panel1.Location = new System.Drawing.Point(234, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1280, 844);
+            this.panel1.Size = new System.Drawing.Size(1282, 844);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -428,5 +445,6 @@ namespace MotorbikeRental
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbTaiKhoanDangDangNhap;
         private System.Windows.Forms.ToolStripMenuItem tsmiLienHe;
+        private System.Windows.Forms.ToolStripMenuItem tsmiKho;
     }
 }

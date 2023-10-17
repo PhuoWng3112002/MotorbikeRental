@@ -48,7 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\anhBLL.cs" />
+    <Compile Include="BusinessLogicLayer\khoBLL.cs" />
     <Compile Include="BusinessLogicLayer\nhaCungCapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\phieuNhapBLL.cs" />
+    <Compile Include="BusinessLogicLayer\phieuThuBLL.cs" />
     <Compile Include="BusinessLogicLayer\phuongTienBLL.cs" />
     <Compile Include="BusinessLogicLayer\quyenBLL.cs" />
     <Compile Include="BusinessLogicLayer\taiKhoanBLL.cs" />
@@ -71,7 +74,10 @@
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\anhDAL.cs" />
+    <Compile Include="DataAccessLayer\khoDAL.cs" />
     <Compile Include="DataAccessLayer\nhaCungCapDAL.cs" />
+    <Compile Include="DataAccessLayer\phieuNhapDAL.cs" />
+    <Compile Include="DataAccessLayer\phieuThuDAL.cs" />
     <Compile Include="DataAccessLayer\phuongTienDAL.cs" />
     <Compile Include="DataAccessLayer\quyenDAL.cs" />
     <Compile Include="DataAccessLayer\taiKhoanDAL.cs" />
@@ -130,6 +136,12 @@
     </Compile>
     <Compile Include="QuanLyKho\anh.Designer.cs">
       <DependentUpon>anh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLyKho\kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyKho\kho.Designer.cs">
+      <DependentUpon>kho.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyKho\loaiSanPham.cs">
       <SubType>Form</SubType>
@@ -226,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKho\anh.resx">
       <DependentUpon>anh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyKho\kho.resx">
+      <DependentUpon>kho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyKho\loaiSanPham.resx">
       <DependentUpon>loaiSanPham.cs</DependentUpon>

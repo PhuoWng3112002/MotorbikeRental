@@ -41,7 +41,7 @@ namespace MotorbikeRental.DataAccessLayer
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "update tblAnhPT set sUrl=@url where PK_iAnh= @id";
+                    cmd.CommandText = "insert into tblAnhPT values(@id, @url)";
                     cmd.Parameters.Add("@id",PK_iAnh);
                     cmd.Parameters.Add("@url", b);
                
@@ -52,13 +52,8 @@ namespace MotorbikeRental.DataAccessLayer
                 }
             }
         }
+        //"insert into tblAnhPT values(@id,@url)"
 
-        byte[] ImageToByteArray(Image img)
-        {
-            MemoryStream m = new MemoryStream();
-            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
-            return m.ToArray();
-        }
         public bool update(string PK_iAnh, Image sUrl)
         {
             byte[] b = ImageToByteArray(sUrl);
@@ -66,8 +61,8 @@ namespace MotorbikeRental.DataAccessLayer
             {
                 using (SqlCommand cmd = cnn.CreateCommand())
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.CommandText = "sp_SuaAnh";
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "update tblAnhPT SET sUrl = @url where @id = PK_iAnh";
                     cmd.Parameters.Add("@id", PK_iAnh);
                     cmd.Parameters.Add("@url", b);
 
@@ -78,6 +73,12 @@ namespace MotorbikeRental.DataAccessLayer
                     return i > 0;
                 }
             }
+        }
+        byte[] ImageToByteArray(Image img)
+        {
+            MemoryStream m = new MemoryStream();
+            img.Save(m, System.Drawing.Imaging.ImageFormat.Png);
+            return m.ToArray();
         }
         public bool deleteById(string iAnh)
         {

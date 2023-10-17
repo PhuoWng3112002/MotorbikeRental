@@ -28,6 +28,8 @@ namespace MotorbikeRental
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new QuanLyChoThueXe.phieuNhapKho());
+            //Application.Run(new QuanLyKho.sanPham());
             Application.Run(new DangNhap_DangKi.DangNhap());
         }
     }
