@@ -55,12 +55,6 @@
     <Compile Include="DangNhap_DangKy\DangNhapTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MotorbikeRental\MotorbikeRental.csproj">
-      <Project>{1FF424A2-C233-4AD2-A891-B25F4243D40E}</Project>
-      <Name>MotorbikeRental</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

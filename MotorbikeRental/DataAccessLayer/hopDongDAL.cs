@@ -33,7 +33,7 @@ namespace MotorbikeRental.DataAccessLayer
 
 
 
-        public bool insert(int PK_iHopDong , int FK_iPhuongTien , DateTime dNgayThue, DateTime dNgayHenTra , float fTongTienDatCoc ,float fTienThuePT , string FK_sCMND , string FK_sCMNDnv, int FK_iPhieuX)
+        public bool insert(int PK_iHopDong, int FK_iPhuongTien, DateTime dNgayThue, DateTime dNgayHenTra, float fTongTienDatCoc, float fTienThuePT, string FK_sCMND, string FK_sCMNDnv, int FK_iPhieuX)
         {
             using (SqlConnection cnn = new SqlConnection(constr))
             {

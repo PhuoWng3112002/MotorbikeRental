@@ -46,7 +46,7 @@ namespace MotorbikeRental.BusinessLogicLayer
                 return false;
 
             else
-                return anhDAL.insert(PK_iAnh, sUrl);
+                return anhDAL.update(PK_iAnh, sUrl);
         }
         public bool deleteById(string iAnh)
         {

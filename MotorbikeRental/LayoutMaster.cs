@@ -45,6 +45,7 @@ namespace MotorbikeRental
                 tsmiSanPham.Visible = false;
                 tsmiLoaiSanPham.Visible = false;
                 tsmiAnhSanPham.Visible = false;
+                tsmiKho.Visible = false;
                 /*ẩn quản lý nhân sự**/
                 quảnLýNhânSựToolStripMenuItem.Visible = false;
                 tsmiDSNV.Visible = false;
@@ -63,6 +64,7 @@ namespace MotorbikeRental
                 tsmiSanPham.Visible = false;
                 tsmiLoaiSanPham.Visible = false;
                 tsmiAnhSanPham.Visible = false;
+                tsmiKho.Visible = false;
                 /*ẩn phiếu nhập/ xuất kho*/
                 quảnLýBánHàngToolStripMenuItem.Visible = false;
                 tsmiPhieuNhapKho.Visible = false;
@@ -285,6 +287,17 @@ namespace MotorbikeRental
         {
             panel1.Controls.Clear();
             lienHe tc = new lienHe();
+            tc.TopLevel = false;
+            panel1.Controls.Add(tc);
+            tc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            tc.Dock = DockStyle.Fill;
+            tc.Show();
+        }
+
+        private void tsmiKho_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            kho tc = new QuanLyKho.kho();
             tc.TopLevel = false;
             panel1.Controls.Add(tc);
             tc.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -53,15 +53,15 @@ namespace MotorbikeRental.TaiKhoan
             this.label4 = new System.Windows.Forms.Label();
             this.tbTK = new System.Windows.Forms.TextBox();
             this.panelTTTK = new System.Windows.Forms.Panel();
-            this.panelCTTK = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnXoaTK = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.btnVeTrangChu = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.btnSua = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnVeTrangChu = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnXoaTK = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelCTTK = new System.Windows.Forms.Panel();
             this.btnLuu = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.panelTTTK.SuspendLayout();
-            this.panelCTTK.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelCTTK.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbCMCD
@@ -156,7 +156,7 @@ namespace MotorbikeRental.TaiKhoan
             this.dtpNgaySinh.CustomFormat = " ";
             this.dtpNgaySinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(229, 269);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(231, 249);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 20, 2);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(240, 30);
@@ -308,6 +308,70 @@ namespace MotorbikeRental.TaiKhoan
             this.panelTTTK.Size = new System.Drawing.Size(272, 979);
             this.panelTTTK.TabIndex = 66;
             // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSua.BackgroundColor = System.Drawing.Color.MidnightBlue;
+            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSua.BorderRadius = 8;
+            this.btnSua.BorderSize = 0;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(23, 209);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(223, 40);
+            this.btnSua.TabIndex = 3;
+            this.btnSua.Text = "Sửa thông tin tài khoản";
+            this.btnSua.TextColor = System.Drawing.Color.White;
+            this.btnSua.UseVisualStyleBackColor = false;
+            // 
+            // btnVeTrangChu
+            // 
+            this.btnVeTrangChu.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnVeTrangChu.BackgroundColor = System.Drawing.Color.CornflowerBlue;
+            this.btnVeTrangChu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnVeTrangChu.BorderRadius = 8;
+            this.btnVeTrangChu.BorderSize = 0;
+            this.btnVeTrangChu.FlatAppearance.BorderSize = 0;
+            this.btnVeTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVeTrangChu.ForeColor = System.Drawing.Color.White;
+            this.btnVeTrangChu.Location = new System.Drawing.Point(23, 268);
+            this.btnVeTrangChu.Name = "btnVeTrangChu";
+            this.btnVeTrangChu.Size = new System.Drawing.Size(223, 40);
+            this.btnVeTrangChu.TabIndex = 2;
+            this.btnVeTrangChu.Text = "Về trang chủ";
+            this.btnVeTrangChu.TextColor = System.Drawing.Color.White;
+            this.btnVeTrangChu.UseVisualStyleBackColor = false;
+            // 
+            // btnXoaTK
+            // 
+            this.btnXoaTK.BackColor = System.Drawing.Color.Crimson;
+            this.btnXoaTK.BackgroundColor = System.Drawing.Color.Crimson;
+            this.btnXoaTK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoaTK.BorderRadius = 8;
+            this.btnXoaTK.BorderSize = 0;
+            this.btnXoaTK.FlatAppearance.BorderSize = 0;
+            this.btnXoaTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaTK.ForeColor = System.Drawing.Color.White;
+            this.btnXoaTK.Location = new System.Drawing.Point(23, 329);
+            this.btnXoaTK.Name = "btnXoaTK";
+            this.btnXoaTK.Size = new System.Drawing.Size(223, 40);
+            this.btnXoaTK.TabIndex = 1;
+            this.btnXoaTK.Text = "Xóa tài khoản";
+            this.btnXoaTK.TextColor = System.Drawing.Color.White;
+            this.btnXoaTK.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 17);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(141, 132);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // panelCTTK
             // 
             this.panelCTTK.Controls.Add(this.btnLuu);
@@ -338,70 +402,6 @@ namespace MotorbikeRental.TaiKhoan
             this.panelCTTK.Size = new System.Drawing.Size(506, 891);
             this.panelCTTK.TabIndex = 67;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(141, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnXoaTK
-            // 
-            this.btnXoaTK.BackColor = System.Drawing.Color.Crimson;
-            this.btnXoaTK.BackgroundColor = System.Drawing.Color.Crimson;
-            this.btnXoaTK.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoaTK.BorderRadius = 8;
-            this.btnXoaTK.BorderSize = 0;
-            this.btnXoaTK.FlatAppearance.BorderSize = 0;
-            this.btnXoaTK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoaTK.ForeColor = System.Drawing.Color.White;
-            this.btnXoaTK.Location = new System.Drawing.Point(23, 329);
-            this.btnXoaTK.Name = "btnXoaTK";
-            this.btnXoaTK.Size = new System.Drawing.Size(223, 40);
-            this.btnXoaTK.TabIndex = 1;
-            this.btnXoaTK.Text = "Xóa tài khoản";
-            this.btnXoaTK.TextColor = System.Drawing.Color.White;
-            this.btnXoaTK.UseVisualStyleBackColor = false;
-            // 
-            // btnVeTrangChu
-            // 
-            this.btnVeTrangChu.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnVeTrangChu.BackgroundColor = System.Drawing.Color.CornflowerBlue;
-            this.btnVeTrangChu.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnVeTrangChu.BorderRadius = 8;
-            this.btnVeTrangChu.BorderSize = 0;
-            this.btnVeTrangChu.FlatAppearance.BorderSize = 0;
-            this.btnVeTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVeTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnVeTrangChu.Location = new System.Drawing.Point(23, 268);
-            this.btnVeTrangChu.Name = "btnVeTrangChu";
-            this.btnVeTrangChu.Size = new System.Drawing.Size(223, 40);
-            this.btnVeTrangChu.TabIndex = 2;
-            this.btnVeTrangChu.Text = "Về trang chủ";
-            this.btnVeTrangChu.TextColor = System.Drawing.Color.White;
-            this.btnVeTrangChu.UseVisualStyleBackColor = false;
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnSua.BackgroundColor = System.Drawing.Color.MidnightBlue;
-            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSua.BorderRadius = 8;
-            this.btnSua.BorderSize = 0;
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(23, 209);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(223, 40);
-            this.btnSua.TabIndex = 3;
-            this.btnSua.Text = "Sửa thông tin tài khoản";
-            this.btnSua.TextColor = System.Drawing.Color.White;
-            this.btnSua.UseVisualStyleBackColor = false;
-            // 
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -429,10 +429,11 @@ namespace MotorbikeRental.TaiKhoan
             this.Controls.Add(this.panelTTTK);
             this.Name = "thongTinTaiKhoan";
             this.Text = "thongTinTaiKhoan";
+            this.Load += new System.EventHandler(this.thongTinTaiKhoan_Load);
             this.panelTTTK.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelCTTK.ResumeLayout(false);
             this.panelCTTK.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

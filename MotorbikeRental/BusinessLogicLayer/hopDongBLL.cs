@@ -18,7 +18,7 @@ namespace MotorbikeRental.BusinessLogicLayer
 
         public bool insert(int PK_iHopDong, int FK_iPhuongTien, DateTime dNgayThue, DateTime dNgayHenTra, float fTongTienDatCoc, float fTienThuePT, string FK_sCMND, string FK_sCMNDnv, int FK_iPhieuX)
         {
-                return hopDongDAL.insert(PK_iHopDong, FK_iPhuongTien, dNgayThue, dNgayHenTra, fTongTienDatCoc,fTienThuePT, FK_sCMND, FK_sCMNDnv , FK_iPhieuX);
+            return hopDongDAL.insert(PK_iHopDong, FK_iPhuongTien, dNgayThue, dNgayHenTra, fTongTienDatCoc, fTienThuePT, FK_sCMND, FK_sCMNDnv, FK_iPhieuX);
         }
 
 

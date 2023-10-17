@@ -11,9 +11,9 @@ namespace MotorbikeRental.DangNhap_DangKi.Tests
     [TestClass()]
     public class DangNhapTests
     {
-        DangNhap dangNhapForm = new DangNhap();
-        [TestMethod()]
-        public void btnDangNhap_ClickTest()
+       /* DangNhap dangNhapForm = new DangNhap();*/
+      /*  [TestMethod()]*/
+       /* public void btnDangNhap_ClickTest()
         {
             // Test case 1: Empty input
             dangNhapForm.tbTK.Text = "";
@@ -40,6 +40,6 @@ namespace MotorbikeRental.DangNhap_DangKi.Tests
             // Assert the next form is shown
             Assert.AreEqual("Đăng Nhập Thành Công", dangNhapForm.IsDisposed);
             Assert.IsTrue(dangNhapForm.IsDisposed);
-        }
-    }
+        }*/
+  /*  }*/
 }

@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 namespace MotorbikeRental.BusinessLogicLayer
 {
 
-   
-  
+
+
     internal class banGiaoBLL
     {
         banGiaoDAL banGiaoDAL = new banGiaoDAL();

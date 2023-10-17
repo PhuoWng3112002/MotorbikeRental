@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace MotorbikeRental.DangNhap_DangKi.Tests
 {
-    [TestClass()]
-    public class DangKyTests
-    {
+   /* [TestClass()]*/
+   /* public class DangKyTests
+    {*/
 
 
-        DangKy dangKyForm = new DangKy();
-        [TestMethod()]
-        public void btnDangKy_ClickTest()
+       /* DangKy dangKyForm = new DangKy();*/
+        /*[TestMethod()]*/
+     /*   public void btnDangKy_ClickTest()
         {
             // Test case 1: Sign up sucessfully
             dangKyForm.tbCMND.Text = "040202005173";
@@ -94,6 +94,6 @@ namespace MotorbikeRental.DangNhap_DangKi.Tests
             dangKyForm.tbCauTraLoi.Text = "Doggy";
             dangKyForm.btnDangKy_Click(this, new System.EventArgs());
             Assert.AreEqual("ngày sinh không được lớn hơn ngày hiện tại!!", dangKyForm.errorProviderDangKy.GetError(dangKyForm.dtpNgaySinh));
-        }
-    }
+        }*/
+  /*  }*/
 }

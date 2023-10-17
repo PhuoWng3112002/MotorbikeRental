@@ -30,44 +30,40 @@ namespace MotorbikeRental.QuanLyKho
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sanPham));
-            this.errorProviderNV = new System.Windows.Forms.ErrorProvider(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.panelDSNV = new System.Windows.Forms.Panel();
             this.lbTitleDS = new System.Windows.Forms.Label();
             this.dgvPT = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbMK = new System.Windows.Forms.TextBox();
-            this.tbHoTen = new System.Windows.Forms.TextBox();
+            this.tbGiaGoc = new System.Windows.Forms.TextBox();
+            this.tbMaPT = new System.Windows.Forms.TextBox();
             this.lbDiaChi = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnTimKiem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.vbButton4 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.vbButton1 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.vbButton3 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
-            this.vbButton2 = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnLamMoi = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnThem = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnXoa = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnSua = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.lbCMND = new System.Windows.Forms.Label();
             this.panelThongTinNV = new System.Windows.Forms.Panel();
             this.lbTitleNV = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.cbMaPhieuThu = new System.Windows.Forms.ComboBox();
+            this.cbAnhPT = new System.Windows.Forms.ComboBox();
+            this.tbTenPT = new System.Windows.Forms.TextBox();
+            this.tbGiaThue = new System.Windows.Forms.TextBox();
             this.lbHoTen = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lbTK = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.lbChucVu = new System.Windows.Forms.Label();
             this.lbSDT = new System.Windows.Forms.Label();
-            this.tbSDT = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNV)).BeginInit();
+            this.cbLoaiPT = new System.Windows.Forms.ComboBox();
+            this.cbTinhTrang = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.panelDSNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPT)).BeginInit();
             this.panel10.SuspendLayout();
@@ -75,9 +71,9 @@ namespace MotorbikeRental.QuanLyKho
             this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // errorProviderNV
+            // errorProvider
             // 
-            this.errorProviderNV.ContainerControl = this;
+            this.errorProvider.ContainerControl = this;
             // 
             // panelDSNV
             // 
@@ -85,7 +81,7 @@ namespace MotorbikeRental.QuanLyKho
             this.panelDSNV.Controls.Add(this.dgvPT);
             this.panelDSNV.Location = new System.Drawing.Point(70, 359);
             this.panelDSNV.Name = "panelDSNV";
-            this.panelDSNV.Size = new System.Drawing.Size(1200, 200);
+            this.panelDSNV.Size = new System.Drawing.Size(1200, 322);
             this.panelDSNV.TabIndex = 16;
             // 
             // lbTitleDS
@@ -107,39 +103,40 @@ namespace MotorbikeRental.QuanLyKho
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPT.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPT.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPT.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPT.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPT.Location = new System.Drawing.Point(22, 61);
             this.dgvPT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvPT.Name = "dgvPT";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPT.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPT.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPT.RowHeadersVisible = false;
             this.dgvPT.RowHeadersWidth = 51;
             this.dgvPT.RowTemplate.Height = 24;
-            this.dgvPT.Size = new System.Drawing.Size(1126, 113);
+            this.dgvPT.Size = new System.Drawing.Size(1126, 235);
             this.dgvPT.TabIndex = 7;
+            this.dgvPT.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPT_CellContentClick);
             // 
             // label1
             // 
@@ -151,27 +148,27 @@ namespace MotorbikeRental.QuanLyKho
             this.label1.TabIndex = 18;
             this.label1.Text = "QUẢN TRỊ PHƯƠNG TIỆN";
             // 
-            // tbMK
+            // tbGiaGoc
             // 
-            this.tbMK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMK.BackColor = System.Drawing.Color.White;
-            this.tbMK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbMK.Location = new System.Drawing.Point(545, 120);
-            this.tbMK.Name = "tbMK";
-            this.tbMK.ReadOnly = true;
-            this.tbMK.Size = new System.Drawing.Size(228, 30);
-            this.tbMK.TabIndex = 64;
+            this.tbGiaGoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbGiaGoc.BackColor = System.Drawing.Color.White;
+            this.tbGiaGoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbGiaGoc.Location = new System.Drawing.Point(545, 120);
+            this.tbGiaGoc.Name = "tbGiaGoc";
+            this.tbGiaGoc.Size = new System.Drawing.Size(228, 30);
+            this.tbGiaGoc.TabIndex = 64;
+            this.tbGiaGoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGiaGoc_KeyPress);
             // 
-            // tbHoTen
+            // tbMaPT
             // 
-            this.tbHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbHoTen.BackColor = System.Drawing.Color.White;
-            this.tbHoTen.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbHoTen.Location = new System.Drawing.Point(157, 13);
-            this.tbHoTen.Name = "tbHoTen";
-            this.tbHoTen.ReadOnly = true;
-            this.tbHoTen.Size = new System.Drawing.Size(233, 30);
-            this.tbHoTen.TabIndex = 60;
+            this.tbMaPT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbMaPT.BackColor = System.Drawing.Color.White;
+            this.tbMaPT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbMaPT.Location = new System.Drawing.Point(157, 13);
+            this.tbMaPT.Name = "tbMaPT";
+            this.tbMaPT.Size = new System.Drawing.Size(233, 30);
+            this.tbMaPT.TabIndex = 60;
+            this.tbMaPT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbMaPT_KeyPress);
             // 
             // lbDiaChi
             // 
@@ -191,41 +188,16 @@ namespace MotorbikeRental.QuanLyKho
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel5.SetColumnSpan(this.panel10, 6);
-            this.panel10.Controls.Add(this.textBox5);
-            this.panel10.Controls.Add(this.btnSearch);
             this.panel10.Controls.Add(this.btnTimKiem);
-            this.panel10.Controls.Add(this.vbButton4);
-            this.panel10.Controls.Add(this.vbButton1);
-            this.panel10.Controls.Add(this.vbButton3);
-            this.panel10.Controls.Add(this.vbButton2);
+            this.panel10.Controls.Add(this.btnLamMoi);
+            this.panel10.Controls.Add(this.btnThem);
+            this.panel10.Controls.Add(this.btnXoa);
+            this.panel10.Controls.Add(this.btnSua);
             this.panel10.Location = new System.Drawing.Point(3, 164);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(1111, 94);
             this.panel10.TabIndex = 19;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox5.Location = new System.Drawing.Point(804, 12);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(240, 32);
-            this.textBox5.TabIndex = 61;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSearch.Location = new System.Drawing.Point(1050, 12);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 32);
-            this.btnSearch.TabIndex = 32;
-            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // btnTimKiem
             // 
@@ -238,89 +210,94 @@ namespace MotorbikeRental.QuanLyKho
             this.btnTimKiem.FlatAppearance.BorderSize = 0;
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(587, 31);
+            this.btnTimKiem.Location = new System.Drawing.Point(788, 31);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(125, 40);
             this.btnTimKiem.TabIndex = 15;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextColor = System.Drawing.Color.White;
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // vbButton4
+            // btnLamMoi
             // 
-            this.vbButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vbButton4.BackColor = System.Drawing.Color.Transparent;
-            this.vbButton4.BackgroundColor = System.Drawing.Color.Transparent;
-            this.vbButton4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.vbButton4.BorderRadius = 15;
-            this.vbButton4.BorderSize = 2;
-            this.vbButton4.FlatAppearance.BorderSize = 0;
-            this.vbButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton4.ForeColor = System.Drawing.Color.Black;
-            this.vbButton4.Location = new System.Drawing.Point(445, 31);
-            this.vbButton4.Name = "vbButton4";
-            this.vbButton4.Size = new System.Drawing.Size(125, 40);
-            this.vbButton4.TabIndex = 14;
-            this.vbButton4.Text = "Làm mới";
-            this.vbButton4.TextColor = System.Drawing.Color.Black;
-            this.vbButton4.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLamMoi.BackColor = System.Drawing.Color.Transparent;
+            this.btnLamMoi.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnLamMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnLamMoi.BorderRadius = 15;
+            this.btnLamMoi.BorderSize = 2;
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.ForeColor = System.Drawing.Color.Black;
+            this.btnLamMoi.Location = new System.Drawing.Point(646, 31);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(125, 40);
+            this.btnLamMoi.TabIndex = 14;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.TextColor = System.Drawing.Color.Black;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
-            // vbButton1
+            // btnThem
             // 
-            this.vbButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 15;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(19, 31);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(125, 40);
-            this.vbButton1.TabIndex = 11;
-            this.vbButton1.Text = "Thêm";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 15;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(220, 31);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(125, 40);
+            this.btnThem.TabIndex = 11;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // vbButton3
+            // btnXoa
             // 
-            this.vbButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vbButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.vbButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.vbButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton3.BorderRadius = 15;
-            this.vbButton3.BorderSize = 0;
-            this.vbButton3.FlatAppearance.BorderSize = 0;
-            this.vbButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton3.ForeColor = System.Drawing.Color.White;
-            this.vbButton3.Location = new System.Drawing.Point(303, 31);
-            this.vbButton3.Name = "vbButton3";
-            this.vbButton3.Size = new System.Drawing.Size(125, 40);
-            this.vbButton3.TabIndex = 13;
-            this.vbButton3.Text = "Xóa";
-            this.vbButton3.TextColor = System.Drawing.Color.White;
-            this.vbButton3.UseVisualStyleBackColor = false;
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.btnXoa.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoa.BorderRadius = 15;
+            this.btnXoa.BorderSize = 0;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(504, 31);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(125, 40);
+            this.btnXoa.TabIndex = 13;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextColor = System.Drawing.Color.White;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // vbButton2
+            // btnSua
             // 
-            this.vbButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.vbButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
-            this.vbButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
-            this.vbButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton2.BorderRadius = 15;
-            this.vbButton2.BorderSize = 0;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(161, 31);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(125, 40);
-            this.vbButton2.TabIndex = 12;
-            this.vbButton2.Text = "Sửa";
-            this.vbButton2.TextColor = System.Drawing.Color.White;
-            this.vbButton2.UseVisualStyleBackColor = false;
+            this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
+            this.btnSua.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(189)))), ((int)(((byte)(74)))));
+            this.btnSua.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnSua.BorderRadius = 15;
+            this.btnSua.BorderSize = 0;
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(362, 31);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(125, 40);
+            this.btnSua.TabIndex = 12;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextColor = System.Drawing.Color.White;
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // lbCMND
             // 
@@ -364,12 +341,13 @@ namespace MotorbikeRental.QuanLyKho
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.91139F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Controls.Add(this.comboBox3, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.comboBox2, 5, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox2, 3, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBox1, 3, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tbMK, 3, 2);
-            this.tableLayoutPanel5.Controls.Add(this.tbHoTen, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.cbTinhTrang, 5, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cbMaPhieuThu, 1, 2);
+            this.tableLayoutPanel5.Controls.Add(this.cbAnhPT, 5, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tbTenPT, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.tbGiaThue, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.tbGiaGoc, 3, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tbMaPT, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.lbDiaChi, 4, 0);
             this.tableLayoutPanel5.Controls.Add(this.lbCMND, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.lbHoTen, 0, 0);
@@ -378,9 +356,7 @@ namespace MotorbikeRental.QuanLyKho
             this.tableLayoutPanel5.Controls.Add(this.lbTK, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.label35, 2, 2);
             this.tableLayoutPanel5.Controls.Add(this.lbSDT, 4, 1);
-            this.tableLayoutPanel5.Controls.Add(this.tbSDT, 5, 1);
-            this.tableLayoutPanel5.Controls.Add(this.lbChucVu, 4, 2);
-            this.tableLayoutPanel5.Controls.Add(this.comboBox1, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.cbLoaiPT, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.panel10, 0, 3);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(26, 28);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -394,6 +370,47 @@ namespace MotorbikeRental.QuanLyKho
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(1117, 260);
             this.tableLayoutPanel5.TabIndex = 9;
+            // 
+            // cbMaPhieuThu
+            // 
+            this.cbMaPhieuThu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMaPhieuThu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaPhieuThu.FormattingEnabled = true;
+            this.cbMaPhieuThu.Location = new System.Drawing.Point(157, 120);
+            this.cbMaPhieuThu.Name = "cbMaPhieuThu";
+            this.cbMaPhieuThu.Size = new System.Drawing.Size(233, 31);
+            this.cbMaPhieuThu.TabIndex = 69;
+            // 
+            // cbAnhPT
+            // 
+            this.cbAnhPT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbAnhPT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbAnhPT.FormattingEnabled = true;
+            this.cbAnhPT.Location = new System.Drawing.Point(882, 13);
+            this.cbAnhPT.Name = "cbAnhPT";
+            this.cbAnhPT.Size = new System.Drawing.Size(232, 31);
+            this.cbAnhPT.TabIndex = 68;
+            // 
+            // tbTenPT
+            // 
+            this.tbTenPT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTenPT.BackColor = System.Drawing.Color.White;
+            this.tbTenPT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbTenPT.Location = new System.Drawing.Point(545, 13);
+            this.tbTenPT.Name = "tbTenPT";
+            this.tbTenPT.Size = new System.Drawing.Size(228, 30);
+            this.tbTenPT.TabIndex = 66;
+            // 
+            // tbGiaThue
+            // 
+            this.tbGiaThue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbGiaThue.BackColor = System.Drawing.Color.White;
+            this.tbGiaThue.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbGiaThue.Location = new System.Drawing.Point(545, 68);
+            this.tbGiaThue.Name = "tbGiaThue";
+            this.tbGiaThue.Size = new System.Drawing.Size(228, 30);
+            this.tbGiaThue.TabIndex = 65;
+            this.tbGiaThue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGiaThue_KeyPress);
             // 
             // lbHoTen
             // 
@@ -455,18 +472,6 @@ namespace MotorbikeRental.QuanLyKho
             this.label35.TabIndex = 29;
             this.label35.Text = "Giá gốc";
             // 
-            // lbChucVu
-            // 
-            this.lbChucVu.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbChucVu.AutoSize = true;
-            this.lbChucVu.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.lbChucVu.Location = new System.Drawing.Point(787, 124);
-            this.lbChucVu.Margin = new System.Windows.Forms.Padding(11, 0, 3, 0);
-            this.lbChucVu.Name = "lbChucVu";
-            this.lbChucVu.Size = new System.Drawing.Size(79, 23);
-            this.lbChucVu.TabIndex = 33;
-            this.lbChucVu.Text = "Đánh giá";
-            // 
             // lbSDT
             // 
             this.lbSDT.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -479,85 +484,45 @@ namespace MotorbikeRental.QuanLyKho
             this.lbSDT.TabIndex = 5;
             this.lbSDT.Text = "Tình trạng";
             // 
-            // tbSDT
+            // cbLoaiPT
             // 
-            this.tbSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbSDT.BackColor = System.Drawing.Color.White;
-            this.tbSDT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.tbSDT.Location = new System.Drawing.Point(882, 68);
-            this.tbSDT.Name = "tbSDT";
-            this.tbSDT.ReadOnly = true;
-            this.tbSDT.Size = new System.Drawing.Size(232, 30);
-            this.tbSDT.TabIndex = 62;
+            this.cbLoaiPT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbLoaiPT.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiPT.FormattingEnabled = true;
+            this.cbLoaiPT.Location = new System.Drawing.Point(157, 67);
+            this.cbLoaiPT.Name = "cbLoaiPT";
+            this.cbLoaiPT.Size = new System.Drawing.Size(233, 31);
+            this.cbLoaiPT.TabIndex = 67;
             // 
-            // textBox1
+            // cbTinhTrang
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox1.Location = new System.Drawing.Point(545, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(228, 30);
-            this.textBox1.TabIndex = 65;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.textBox2.Location = new System.Drawing.Point(545, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(228, 30);
-            this.textBox2.TabIndex = 66;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(157, 70);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(233, 31);
-            this.comboBox1.TabIndex = 67;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(882, 16);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(232, 31);
-            this.comboBox2.TabIndex = 68;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(157, 123);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(233, 31);
-            this.comboBox3.TabIndex = 69;
+            this.cbTinhTrang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbTinhTrang.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTinhTrang.FormattingEnabled = true;
+            this.cbTinhTrang.Items.AddRange(new object[] {
+            "Đã thuê",
+            "Chưa thuê"});
+            this.cbTinhTrang.Location = new System.Drawing.Point(882, 67);
+            this.cbTinhTrang.Name = "cbTinhTrang";
+            this.cbTinhTrang.Size = new System.Drawing.Size(232, 31);
+            this.cbTinhTrang.TabIndex = 69;
             // 
             // sanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1313, 667);
+            this.ClientSize = new System.Drawing.Size(1313, 770);
             this.Controls.Add(this.panelDSNV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelThongTinNV);
             this.Name = "sanPham";
             this.Text = "sanPham";
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderNV)).EndInit();
+            this.Load += new System.EventHandler(this.sanPham_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.panelDSNV.ResumeLayout(false);
             this.panelDSNV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPT)).EndInit();
             this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panelThongTinNV.ResumeLayout(false);
             this.panelThongTinNV.PerformLayout();
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -569,7 +534,7 @@ namespace MotorbikeRental.QuanLyKho
 
         #endregion
 
-        private System.Windows.Forms.ErrorProvider errorProviderNV;
+        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Panel panelDSNV;
         private System.Windows.Forms.Label lbTitleDS;
         private System.Windows.Forms.DataGridView dgvPT;
@@ -577,30 +542,27 @@ namespace MotorbikeRental.QuanLyKho
         private System.Windows.Forms.Panel panelThongTinNV;
         private System.Windows.Forms.Label lbTitleNV;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TextBox tbMK;
-        private System.Windows.Forms.TextBox tbHoTen;
+        private System.Windows.Forms.TextBox tbGiaGoc;
+        private System.Windows.Forms.TextBox tbMaPT;
         private System.Windows.Forms.Label lbDiaChi;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Button btnSearch;
         private PresentationLayer.Custom.VBButton btnTimKiem;
-        private PresentationLayer.Custom.VBButton vbButton4;
-        private PresentationLayer.Custom.VBButton vbButton1;
-        private PresentationLayer.Custom.VBButton vbButton3;
-        private PresentationLayer.Custom.VBButton vbButton2;
+        private PresentationLayer.Custom.VBButton btnLamMoi;
+        private PresentationLayer.Custom.VBButton btnThem;
+        private PresentationLayer.Custom.VBButton btnXoa;
+        private PresentationLayer.Custom.VBButton btnSua;
         private System.Windows.Forms.Label lbCMND;
         private System.Windows.Forms.Label lbHoTen;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbTK;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label lbChucVu;
         private System.Windows.Forms.Label lbSDT;
-        private System.Windows.Forms.TextBox tbSDT;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbMaPhieuThu;
+        private System.Windows.Forms.ComboBox cbAnhPT;
+        private System.Windows.Forms.TextBox tbTenPT;
+        private System.Windows.Forms.TextBox tbGiaThue;
+        private System.Windows.Forms.ComboBox cbLoaiPT;
+        private System.Windows.Forms.ComboBox cbTinhTrang;
     }
 }
