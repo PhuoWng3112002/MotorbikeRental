@@ -128,8 +128,6 @@ namespace MotorbikeRental.DangNhap_DangKi
             DangKy dk= new DangNhap_DangKi.DangKy();
             dk.Show();
             this.Hide();
-
-
         }
 
     
@@ -146,9 +144,11 @@ namespace MotorbikeRental.DangNhap_DangKi
            
         }
 
-        
+
         private void btnDangNhap_Click(object sender, EventArgs e)
+
         {
+
             //LayoutMaster lm = new LayoutMaster();
             //lm.Show();
             //this.Hide();

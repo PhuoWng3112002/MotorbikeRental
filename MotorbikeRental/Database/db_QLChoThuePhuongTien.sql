@@ -1,3 +1,15 @@
+
+CREATE DATABASE db_QuanLyChoThuePhuongTien
+ON (
+	NAME = ManagerRental,
+	FILENAME = 'E:\Learning\NHAPMONCNPM\source\Sql\db_QuanLyChoThuePhuongTien.mdf',
+	SIZE = 100MB,
+	MAXSIZE = UNLIMITED,
+	FILEGROWTH = 10%
+)
+
+
+
 create database db_QuanLyChoThuePhuongTien
 go
 use db_QuanLyChoThuePhuongTien
@@ -227,6 +239,8 @@ add constraint FK_BG_HD foreign key (PK_iHopDong) references tblBanGiao(PK_iHopD
 	constraint FK_CTNV_HD foreign key (FK_sCMNDnv) references tblCTNV(PK_sCMNDnv),
 	constraint FK_PT_HD foreign key (FK_iPhuongTien) references tblPhuongTien(PK_iPhuongTien)
 
+alter table tblHopDong
+drop constraint FK_BG_HD
 alter table tblNhanVien
 add 
 	constraint FK_CV_NV foreign key (FK_iChucVu) references tblChucVu(PK_iChucVu)
@@ -238,12 +252,19 @@ add
 
 
 /*******************************************************************************************************/
+SELECT *FROM tblHopDong
+SELECT *FROM tblBanGiao
+SELECT *FROM tblCTNguoiDung
+SELECT *FROM tblCTNV
+SELECT *FROM tblPhuongTien
+SELECT *FROM tblPhieuXuat
+SELECT * FROM tblLoaiPhuongTien
 
 /*CREATE VIEW*/
 /* gp 2 tblND & tblNV*/
 create view vv_TaiKhoan 
 AS
-SELECT *FROM tblNhanVien
+SELECT *FROM tblNguoiDung
 UNION
 SELECT *FROM tblNguoiDung
 go
@@ -252,15 +273,18 @@ select * from vv_TaiKhoan
 /* gp 2 tblCTND & tblCTNV*/
 create view vv_CTTaiKhoan 
 AS
-SELECT *FROM tblCTNguoiDung
+SELECT * FROM tblCTNguoiDung
 UNION
-SELECT *FROM tblCTNV
+SELECT * FROM tblCTNV
 go
+
+ ALTER table tblCTNV add  sChucVu nvarchar(100)
+
 
 select * from tblCTNV
 select * from tblCTNguoiDung
 
-select * from vv_CTTaiKhoan
+ 
 /**/
 
 create view vv_TaiKhoan_ChucVu 
@@ -328,6 +352,7 @@ BEGIN
 	WHERE sTK = @tenTK
 END
 
+-- dang loi oi day
 CREATE proc sp_ThemND
 	@CMND varchar(12),
 	@TK nvarchar(50),
@@ -485,4 +510,104 @@ END
 GO
 
 select * from tblAnhPT
+
+-- them hop dong
+CREATE proc proc_ThemHopDong
+    @PK_iHopDong int ,
+	@FK_iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12),
+	@FK_iPhieuX int
+AS
+BEGIN
+
+	INSERT INTO tblHopDong
+	VALUES(@PK_iHopDong ,@FK_iPhuongTien , @dNgayThue ,@dNgayHenTra ,@fTongTienDatCoc , @fTienThuePT , @FK_sCMND , @FK_sCMNDnv , @FK_iPhieuX)
+END
+
+select * from tblHopDong
+
+CREATE proc proc_SuaHopDong
+    @PK_iHopDong int ,
+	@FK_iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12),
+	@FK_iPhieuX int
+AS
+BEGIN
+
+	UPDATE tblHopDong
+	SET  
+		FK_iPhuongTien=@FK_iPhuongTien,
+		dNgayThue= @dNgayThue ,
+		dNgayHenTra = @dNgayHenTra,
+		fTongTienDatCoc = @fTongTienDatCoc,
+		fTienThuePT = @fTienThuePT,
+		FK_sCMND = @FK_sCMND,
+		FK_sCMNDnv =  @FK_sCMNDnv,
+		FK_iPhieuX = @FK_iPhieuX
+	WHERE PK_iHopDong=@PK_iHopDong
+END
+
+
+select * from tblPhuongTien
+select * from tblCTPhuongTien
+select * from tblBanGiao
+select * from tblCTNguoiDung
+
+-- ban giao
+CREATE OR ALTER proc proc_ThemBanGiao
+    @PK_iHopDong int ,
+	@iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@sGhiChu varchar(100),
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12)
+	
+AS
+BEGIN
+
+	INSERT INTO tblBanGiao
+	VALUES(@PK_iHopDong ,@iPhuongTien , @dNgayThue ,@dNgayHenTra ,@fTongTienDatCoc , @fTienThuePT ,@sGhiChu, @FK_sCMND , @FK_sCMNDnv )
+END
+
+
+
+
+CREATE OR ALTER proc proc_SuaBanGiao
+    @PK_iHopDong int ,
+	@iPhuongTien int,
+	@dNgayThue date,
+	@dNgayHenTra date,
+	@fTongTienDatCoc float,
+	@fTienThuePT float,
+	@sGhiChu varchar(100),
+	@FK_sCMND varchar(12),
+	@FK_sCMNDnv varchar(12)
+AS
+BEGIN
+
+	UPDATE tblBanGiao
+	SET  
+		iPhuongTien=@iPhuongTien,
+		dNgayThue= @dNgayThue ,
+		dNgayHenTra = @dNgayHenTra,
+		fTongTienDatCoc = @fTongTienDatCoc,
+		fTongTienThuePT = @fTienThuePT,
+		FK_sCMND = @FK_sCMND,
+		FK_sCMNDnv =  @FK_sCMNDnv,
+		sGhiChu = @sGhiChu
+	WHERE PK_iHopDong=@PK_iHopDong
+END
 

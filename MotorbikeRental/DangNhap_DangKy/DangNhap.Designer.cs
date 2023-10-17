@@ -324,18 +324,18 @@ namespace MotorbikeRental.DangNhap_DangKi
         private PresentationLayer.Custom.VBButton btnDangNhap;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
+         public System.Windows.Forms.Panel panel2;
         private PresentationLayer.Custom.VBButton btnDangKy;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbTK;
-        private System.Windows.Forms.TextBox tbMK;
-        private System.Windows.Forms.CheckBox ckbHienMK;
-        private System.Windows.Forms.Panel panel_Title;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ErrorProvider errorProviderLogin;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox tbTK;
+        public System.Windows.Forms.TextBox tbMK;
+        public System.Windows.Forms.CheckBox ckbHienMK;
+        public System.Windows.Forms.Panel panel_Title;
+        public System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.ErrorProvider errorProviderLogin;
     }
 }

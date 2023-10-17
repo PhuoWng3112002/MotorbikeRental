@@ -31,6 +31,7 @@ namespace MotorbikeRental
             //Application.Run(new QuanLyChoThueXe.phieuNhapKho());
             //Application.Run(new QuanLyKho.sanPham());
             Application.Run(new DangNhap_DangKi.DangNhap());
+          /*  Application.Run(new QuanLyChoThueXe.hopDong());*/
         }
     }
 }

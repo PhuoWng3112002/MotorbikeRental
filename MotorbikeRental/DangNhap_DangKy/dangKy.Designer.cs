@@ -37,7 +37,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbMK = new System.Windows.Forms.TextBox();
-            this.btnDangNhap = new MotorbikeRental.PresentationLayer.Custom.VBButton();
+            this.btnDangKy = new MotorbikeRental.PresentationLayer.Custom.VBButton();
             this.label2 = new System.Windows.Forms.Label();
             this.tbTK = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -121,7 +121,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(60, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 32);
+            this.label1.Size = new System.Drawing.Size(202, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Motorbike Rental";
             // 
@@ -144,26 +144,26 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.tbMK.Size = new System.Drawing.Size(240, 27);
             this.tbMK.TabIndex = 7;
             // 
-            // btnDangNhap
+            // btnDangKy
             // 
-            this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
-            this.btnDangNhap.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
-            this.btnDangNhap.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDangNhap.BorderRadius = 5;
-            this.btnDangNhap.BorderSize = 0;
-            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangNhap.FlatAppearance.BorderSize = 0;
-            this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btnDangNhap.Location = new System.Drawing.Point(770, 556);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(174, 40);
-            this.btnDangNhap.TabIndex = 3;
-            this.btnDangNhap.Text = "ĐĂNG KÝ";
-            this.btnDangNhap.TextColor = System.Drawing.Color.White;
-            this.btnDangNhap.UseVisualStyleBackColor = false;
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnDangKy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
+            this.btnDangKy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
+            this.btnDangKy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDangKy.BorderRadius = 5;
+            this.btnDangKy.BorderSize = 0;
+            this.btnDangKy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangKy.FlatAppearance.BorderSize = 0;
+            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangKy.ForeColor = System.Drawing.Color.White;
+            this.btnDangKy.Location = new System.Drawing.Point(770, 556);
+            this.btnDangKy.Name = "btnDangKy";
+            this.btnDangKy.Size = new System.Drawing.Size(174, 40);
+            this.btnDangKy.TabIndex = 3;
+            this.btnDangKy.Text = "ĐĂNG KÝ";
+            this.btnDangKy.TextColor = System.Drawing.Color.White;
+            this.btnDangKy.UseVisualStyleBackColor = false;
+            this.btnDangKy.Click += new System.EventHandler(this.btnDangKy_Click);
             // 
             // label2
             // 
@@ -172,7 +172,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(6)))), ((int)(((byte)(31)))));
             this.label2.Location = new System.Drawing.Point(357, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 32);
+            this.label2.Size = new System.Drawing.Size(247, 31);
             this.label2.TabIndex = 0;
             this.label2.Text = "ĐĂNG KÝ TÀI KHOẢN";
             // 
@@ -216,7 +216,7 @@ namespace MotorbikeRental.DangNhap_DangKi
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.tbMK);
-            this.panel1.Controls.Add(this.btnDangNhap);
+            this.panel1.Controls.Add(this.btnDangKy);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tbTK);
             this.panel1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -536,42 +536,42 @@ namespace MotorbikeRental.DangNhap_DangKi
 
         #endregion
 
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel_Title;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tbMK;
-        private PresentationLayer.Custom.VBButton btnDangNhap;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbTK;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tbNhapLaiMK;
-        private System.Windows.Forms.TextBox tbCauTraLoi;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button btnClose;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Panel panel_Title;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox tbMK;
+        private PresentationLayer.Custom.VBButton btnDangKy;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox tbTK;
+        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnBack;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.TextBox tbNhapLaiMK;
+        public System.Windows.Forms.TextBox tbCauTraLoi;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label5;
         private PresentationLayer.Custom.VBButton btnHuy;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbCMND;
-        private System.Windows.Forms.Label lbCMND;
-        private System.Windows.Forms.Label lbNgaySInh;
-        private System.Windows.Forms.TextBox tbDiaChi;
-        private System.Windows.Forms.Label lbHoTen;
-        private System.Windows.Forms.TextBox tbHoTen;
-        private System.Windows.Forms.RadioButton rbNu;
-        private System.Windows.Forms.RadioButton rbNam;
-        private System.Windows.Forms.Label lbGioiTinh;
-        private System.Windows.Forms.Label lbSDT;
-        private System.Windows.Forms.TextBox tbSDT;
-        private System.Windows.Forms.Label lbDiaChi;
-        private System.Windows.Forms.DateTimePicker dtpNgaySinh;
-        private System.Windows.Forms.ErrorProvider errorProviderDangKy;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbCauHoi;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox tbCMND;
+        public System.Windows.Forms.Label lbCMND;
+        public System.Windows.Forms.Label lbNgaySInh;
+        public System.Windows.Forms.TextBox tbDiaChi;
+        public System.Windows.Forms.Label lbHoTen;
+        public System.Windows.Forms.TextBox tbHoTen;
+        public System.Windows.Forms.RadioButton rbNu;
+        public System.Windows.Forms.RadioButton rbNam;
+        public System.Windows.Forms.Label lbGioiTinh;
+        public System.Windows.Forms.Label lbSDT;
+        public System.Windows.Forms.TextBox tbSDT;
+        public System.Windows.Forms.Label lbDiaChi;
+        public System.Windows.Forms.DateTimePicker dtpNgaySinh;
+        public System.Windows.Forms.ErrorProvider errorProviderDangKy;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.TextBox tbCauHoi;
         private System.Windows.Forms.Label lbCMCD;
     }
 }

@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogicLayer\anhBLL.cs" />
+    <Compile Include="BusinessLogicLayer\banGiaoBLL.cs" />
+    <Compile Include="BusinessLogicLayer\hopDongBLL.cs" />
     <Compile Include="BusinessLogicLayer\khoBLL.cs" />
     <Compile Include="BusinessLogicLayer\nhaCungCapBLL.cs" />
     <Compile Include="BusinessLogicLayer\phieuNhapBLL.cs" />
@@ -74,6 +76,8 @@
       <DependentUpon>DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="DataAccessLayer\anhDAL.cs" />
+    <Compile Include="DataAccessLayer\banGiaoDAL.cs" />
+    <Compile Include="DataAccessLayer\hopDongDAL.cs" />
     <Compile Include="DataAccessLayer\khoDAL.cs" />
     <Compile Include="DataAccessLayer\nhaCungCapDAL.cs" />
     <Compile Include="DataAccessLayer\phieuNhapDAL.cs" />
