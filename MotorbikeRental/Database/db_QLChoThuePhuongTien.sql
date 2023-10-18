@@ -611,3 +611,229 @@ BEGIN
 	WHERE PK_iHopDong=@PK_iHopDong
 END
 
+/*phiếu nhập, kho, phương tiện*/
+/***/
+select * from tblPhieuNhap
+select * from tblCTPhieuNhap
+--SELECT tblPhieuNhap.PK_iPhieuN, tblPhieuNhap.iTTrongTai,tblPhieuNhap.fTongGiaN,tblPhieuNhap.FK_iNCC,tblPhieuNhap.FK_sCMNDnv,tblPhieuNhap.FK_iPhieuThu,
+--			tblCTPhieuNhap.iSoLuongN,tblNCC.fDonGiaN,tblCTPhieuNhap.FK_iLoaiPT,
+--			tblNCC.sPhuongTienN,tblNCC.sHangSanXuat,
+--			tblLoaiPhuongTien.sLoaiPT,tblLoaiPhuongTien.sPhanKhoi
+--	FROM( (tblPhieuNhap inner join tblCTPhieuNhap
+--	on tblCTPhieuNhap.PK_iPhieuN=tblCTPhieuNhap.PK_iPhieuN) inner join tblNCC
+--	on tblPhieuNhap.FK_iNCC=tblNCC.PK_iNCC)inner join tblLoaiPhuongTien
+--	on tblCTPhieuNhap.FK_iLoaiPT = tblLoaiPhuongTien.PK_iLoaiPT
+--	group by tblPhieuNhap.PK_iPhieuN,tblPhieuNhap.iTTrongTai,tblPhieuNhap.fTongGiaN,tblPhieuNhap.FK_iNCC,tblPhieuNhap.FK_sCMNDnv,tblPhieuNhap.FK_iPhieuThu,tblCTPhieuNhap.iSoLuongN,tblNCC.fDonGiaN,tblCTPhieuNhap.FK_iLoaiPT,
+--			tblNCC.sPhuongTienN,tblNCC.sHangSanXuat,
+--			tblLoaiPhuongTien.sLoaiPT,tblLoaiPhuongTien.sPhanKhoi
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+create view vv_PhieuNhap
+as
+	SELECT tblPhieuNhap.PK_iPhieuN, tblPhieuNhap.iTTrongTai, tblPhieuNhap.iTongSLN,tblPhieuNhap.fTongGiaN,tblPhieuNhap.FK_iNCC,
+			tblPhieuNhap.FK_sCMNDnv,tblPhieuNhap.FK_iPhieuThu,
+			tblCTPhieuNhap.iSoLuongN,tblCTPhieuNhap.FK_iLoaiPT
+			
+	FROM tblPhieuNhap inner join tblCTPhieuNhap
+	on tblCTPhieuNhap.PK_iPhieuN=tblCTPhieuNhap.PK_iPhieuN
+GO
+select * from vv_PhieuNhap
+drop view vv_PhieuThu
+alter proc sp_PhieuNhap
+as
+begin
+	SELECT tblPhieuNhap.PK_iPhieuN, tblPhieuNhap.iTTrongTai,tblPhieuNhap.fTongGiaN,tblPhieuNhap.FK_iNCC,
+			tblPhieuNhap.FK_sCMNDnv,tblPhieuNhap.FK_iPhieuThu,
+			tblCTPhieuNhap.iSoLuongN,tblCTPhieuNhap.FK_iLoaiPT
+			
+	FROM tblPhieuNhap inner join tblCTPhieuNhap
+	on tblCTPhieuNhap.PK_iPhieuN=tblCTPhieuNhap.PK_iPhieuN
+	group by tblPhieuNhap.PK_iPhieuN,tblPhieuNhap.iTTrongTai,tblPhieuNhap.fTongGiaN,tblPhieuNhap.FK_iNCC,
+			tblPhieuNhap.FK_sCMNDnv,tblPhieuNhap.FK_iPhieuThu,tblCTPhieuNhap.iSoLuongN,tblCTPhieuNhap.FK_iLoaiPT
+end
+Delete from tblCTPhieuThu where PK_iPhieuN = @iMaPhieuN" +
+                        "Delete from tblPhieuThu where PK_iPhieuN=@iMaPhieuN 
+
+alter proc sp_XoaPhieuN
+	(@iMaPhieuN int)
+as
+begin
+	Delete from tblCTPhieuNhap where PK_iPhieuN = @iMaPhieuN
+	Delete from tblPhieuNhap where PK_iPhieuN = @iMaPhieuN
+end
+
+exec sp_PhieuNhap
+
+select * from tblPhieuNhap
+select * from tblCTPhieuNhap
+select * from tblKho
+delete from tblPhieuNhap
+delete from tblKho
+where iPhuongTien=10
+alter table tblCTPhieuNhap
+drop column fDonGiaN
+
+select sHangSanXuat from tblNCC group by sHangSanXuat
+select sPhuongTienN from tblNCC where N'NCC_Toyota'=sHangSanXuat
+
+alter proc sp_cbNCC_DonGia
+@ma int
+AS
+begin
+	select tblNCC.fDonGiaN 
+	from tblNCC 
+	where PK_iNCC=@ma
+end
+
+
+
+EXEC pr_SoSVtheoma 'N017'
+EXEC sp_cbNCC_DonGia '1'
+/********************************/
+create proc sp_cbNCC_TenPT
+(@ma int)
+AS
+begin
+	select sPhuongTienN from tblNCC where PK_iNCC=@ma
+end
+/********************************/
+create proc sp_cbNCC_HSX
+(@ma int)
+AS
+begin
+	select sHangSanXuat from tblNCC where PK_iNCC=@ma
+end
+
+select PK_iNCC from tblNCC
+
+exec sp_cbNCC_DonGia 1
+
+/**/
+select * from tblPhieuNhap
+select * from tblCTPhieuNhap
+
+alter proc sp_ThemPhieuN
+	@iPhieuN int,
+	@iTTrongTai int,
+	@iTongSLN int,
+	@iTongGiaN int,
+	@iNCC int,
+	@sCMND varchar(12),
+	@iPhieuThu int,
+	@iSoLuongN int,
+	@iLoaiPT int
+AS
+BEGIN
+
+	INSERT INTO tblPhieuNhap
+	VALUES(@iPhieuN,@iTTrongTai ,@iTongSLN ,@iTongGiaN ,@iNCC,@sCMND,@iPhieuThu)
+	INSERT INTO tblCTPhieuNhap
+	VALUES(@iPhieuN,@iSoLuongN ,@iLoaiPT)
+END
+/***************************************************/
+alter proc sp_SuaPhieuN
+	@iPhieuN int,
+	@iTTrongTai int,
+	@iTongSLN int,
+	@iTongGiaN int,
+	@iNCC int,
+	@sCMND varchar(12),
+	@iPhieuThu int,
+	@iSoLuongN int,
+	@iLoaiPT int
+AS
+BEGIN
+
+	UPDATE tblPhieuNhap
+	SET
+	PK_iPhieuN=@iPhieuN,
+	iTTrongTai=@iTTrongTai ,
+	iTongSLN=@iTongSLN ,
+	fTongGiaN=@iTongGiaN ,
+	FK_iNCC=@iNCC,
+	FK_sCMNDnv=@sCMND,
+	FK_iPhieuThu=@iPhieuThu
+	where PK_iPhieuN=@iPhieuN
+
+	UPDATE tblCTPhieuNhap
+	SET
+	PK_iPhieuN=@iPhieuN,
+	iSoLuongN=@iSoLuongN,
+	FK_iLoaiPT=@iLoaiPT
+	
+	where PK_iPhieuN=@iPhieuN
+
+
+END
+
+create view vv_PhuongTien
+as
+	select tblPhuongTien.PK_iPhuongTien,tblPhuongTien.FK_iLoaiPT,tblPhuongTien.FK_iPhieuThu,
+			tblCTPhuongTien.sTenPhuongTien,tblCTPhuongTien.fGiaThue,tblCTPhuongTien.fGiaGoc,tblCTPhuongTien.FK_iAnh,tblCTPhuongTien.sTinhTrang
+	from tblPhuongTien inner join tblCTPhuongTien
+	on tblPhuongTien.PK_iPhuongTien=tblCTPhuongTien.PK_iPhuongTien
+
+
+	select *from vv_PhuongTien	
+	select *from tblAnhPT	
+	select *from tblPhuongTien	
+	select *from tblCTPhuongTien
+
+
+alter proc sp_ThemPT
+(
+	 @maPT int,
+	 @loaiPT int,
+	 @iPhieuThu int,
+	 @tenPT nvarchar(100),
+	 @giaThue float,
+	 @giaGoc float, 
+	 @anhPT int,
+	 @tTrang nvarchar(50)
+)
+AS
+Begin
+	insert into tblPhuongTien
+	values(@maPT,@loaiPT,@iPhieuThu)
+
+	insert into tblCTPhuongTien
+	values(@maPT,@tenPT,@giaThue,@giaGoc,@anhPT,@tTrang)
+end
+
+alter table tblCTPhuongTien
+Drop column FK_iDanhGia
+
+create proc sp_SuaPT
+(
+	 @maPT int,
+	 @loaiPT int,
+	 @iPhieuThu int,
+	 @tenPT nvarchar(100),
+	 @giaThue float,
+	 @giaGoc float, 
+	 @anhPT int,
+	 @tTrang nvarchar(50)
+)
+AS
+Begin
+	update tblPhuongTien
+	set PK_iPhuongTien=@maPT,
+		FK_iLoaiPT=@loaiPT,
+		FK_iPhieuThu=@iPhieuThu
+	where PK_iPhuongTien=@maPT
+
+
+	update tblCTPhuongTien
+	set PK_iPhuongTien=@maPT,
+	sTenPhuongTien=@tenPT,
+	fGiaThue=@giaThue,
+	fGiaGoc=@giaGoc,
+	FK_iAnh=@anhPT,
+	sTinhTrang=@tTrang
+	where PK_iPhuongTien=@maPT
+
+end
+/*Chạy file backups vì thêm/ sửa/ xóa nhiều cột và dl không có trong SQL*/
