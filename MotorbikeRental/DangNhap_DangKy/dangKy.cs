@@ -289,7 +289,7 @@ namespace MotorbikeRental.DangNhap_DangKi
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            DangNhap dn = new DangNhap_DangKi.DangNhap();
+            DangNhap dn = new DangNhap();
             dn.Show();
             this.Hide();
         }
