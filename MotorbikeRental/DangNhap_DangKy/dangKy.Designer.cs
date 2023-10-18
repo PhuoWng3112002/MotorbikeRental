@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace MotorbikeRental.DangNhap_DangKi
 {
     partial class DangKy
@@ -532,6 +534,11 @@ namespace MotorbikeRental.DangNhap_DangKi
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderDangKy)).EndInit();
             this.ResumeLayout(false);
 
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
