@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="baitap.cs" />
     <Compile Include="BusinessLogicLayer\anhBLL.cs" />
     <Compile Include="BusinessLogicLayer\banGiaoBLL.cs" />
     <Compile Include="BusinessLogicLayer\hopDongBLL.cs" />
@@ -183,6 +184,7 @@
     <Compile Include="quenMK.Designer.cs">
       <DependentUpon>quenMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="TaiKhoan\Baitapcanhan.cs" />
     <Compile Include="TaiKhoan\doiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
